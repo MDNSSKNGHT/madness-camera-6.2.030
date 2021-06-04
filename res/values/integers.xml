@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="abc_config_activityDefaultDur">220</integer>
+    <integer name="abc_config_activityShortDur">150</integer>
+    <item type="integer" name="APKTOOL_DUMMY_2">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_3">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_4">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_5">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_6">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_7">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_8">false</item>
+    <integer name="bottom_bar_recording_fade_delay_ms">217</integer>
+    <integer name="bottom_bar_recording_fade_duration_ms">217</integer>
+    <item type="integer" name="APKTOOL_DUMMY_b">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_c">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_d">false</item>
+    <integer name="complicationDrawable_borderStyle">1</integer>
+    <integer name="complicationDrawable_highlightDurationMs">300</integer>
+    <item type="integer" name="APKTOOL_DUMMY_10">false</item>
+    <integer name="config_change_rotation_duration_ms">250</integer>
+    <item type="integer" name="APKTOOL_DUMMY_12">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_13">false</item>
+    <integer name="design_tab_indicator_anim_duration_ms">300</integer>
+    <integer name="evcomp_visibility_timeout_millis">2000</integer>
+    <item type="integer" name="APKTOOL_DUMMY_16">false</item>
+    <integer name="google_btn_anim_delay_ms">100</integer>
+    <integer name="google_btn_anim_duration_ms">100</integer>
+    <integer name="google_play_services_version">10298000</integer>
+    <integer name="hide_more_modes_animation_duration">300</integer>
+    <integer name="hide_notification_dot_animation_delay">1000</integer>
+    <integer name="hide_notification_dot_animation_duration">500</integer>
+    <integer name="hide_password_duration">320</integer>
+    <integer name="move_accent_animation_duration">125</integer>
+    <integer name="mtrl_btn_anim_delay_ms">100</integer>
+    <integer name="mtrl_btn_anim_duration_ms">100</integer>
+    <integer name="mtrl_chip_anim_duration">100</integer>
+    <integer name="mtrl_tab_indicator_anim_duration_ms">250</integer>
+    <integer name="photobooth_shutter_dynamic_outer_fill_alpha">127</integer>
+    <integer name="photobooth_shutter_fill_alpha">255</integer>
+    <integer name="photobooth_tutorial_background_anim_duration">200</integer>
+    <integer name="photobooth_tutorial_text_anim_duration">200</integer>
+    <integer name="photobooth_tutorial_text_body_delay">250</integer>
+    <integer name="photobooth_tutorial_text_title_delay">200</integer>
+    <item type="integer" name="APKTOOL_DUMMY_29">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_2a">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_2b">false</item>
+    <item type="integer" name="APKTOOL_DUMMY_2c">false</item>
+    <integer name="show_more_modes_animation_duration">300</integer>
+    <integer name="show_password_duration">200</integer>
+    <integer name="smarts_ui_animation_duration_ms">300</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <integer name="zoom_seekbar_default_major_tics">5</integer>
+    <integer name="zoom_seekbar_ffc_major_tics">3</integer>
+</resources>

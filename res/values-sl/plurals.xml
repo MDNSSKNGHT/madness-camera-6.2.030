@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Rafal (%1$d fotografij)</item>
+        <item quantity="one">Rafal (%1$d fotografija)</item>
+        <item quantity="two">Rafal (%1$d fotografiji)</item>
+        <item quantity="few">Rafal (%1$d fotografije)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d obrazov.</item>
+        <item quantity="one">%1$d obraz.</item>
+        <item quantity="two">%1$d obraza.</item>
+        <item quantity="few">%1$d obrazi.</item>
+    </plurals>
+</resources>

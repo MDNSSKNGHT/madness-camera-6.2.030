@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Серыя (%1$d фота)</item>
+        <item quantity="one">Серыя (%1$d фота)</item>
+        <item quantity="few">Серыя (%1$d фота)</item>
+        <item quantity="many">Серыя (%1$d фота)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d твару.</item>
+        <item quantity="one">%1$d твар.</item>
+        <item quantity="few">%1$d твары.</item>
+        <item quantity="many">%1$d твараў.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">ფოტოსერია (%1$d ფოტო)</item>
+        <item quantity="one">ფოტოსერია (%1$d ფოტო)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d სახე.</item>
+        <item quantity="one">%1$d სახე.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">एक क्लिक में कई फ़ोटो (बर्स्ट) (%1$d फ़ोटो)</item>
+        <item quantity="one">एक क्लिक में कई फ़ोटो (बर्स्ट) (%1$d फ़ोटो)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d चेहरे.</item>
+        <item quantity="one">%1$d चेहरे.</item>
+    </plurals>
+    <plurals name="time_difference_short_days">
+        <item quantity="other">%d दिन</item>
+        <item quantity="one">%d दिन</item>
+    </plurals>
+    <plurals name="time_difference_short_hours">
+        <item quantity="other">%d घंटे</item>
+        <item quantity="one">%d घंटा</item>
+    </plurals>
+    <plurals name="time_difference_short_minutes">
+        <item quantity="other">%d मि.</item>
+        <item quantity="one">%d मि.</item>
+    </plurals>
+    <plurals name="time_difference_words_days">
+        <item quantity="other">%d दिन</item>
+        <item quantity="one">%d दिन</item>
+    </plurals>
+    <plurals name="time_difference_words_hours">
+        <item quantity="other">%d घंटे</item>
+        <item quantity="one">%d घंटे</item>
+    </plurals>
+    <plurals name="time_difference_words_minutes">
+        <item quantity="other">%d मि.</item>
+        <item quantity="one">%d मि.</item>
+    </plurals>
+</resources>

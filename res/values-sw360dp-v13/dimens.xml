@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_bar_content_size">102.0dip</dimen>
+    <dimen name="bottom_bar_side_content_size">74.0dip</dimen>
+    <dimen name="mode_chip_insetLeft">3.0dip</dimen>
+    <dimen name="mode_chip_insetRight">3.0dip</dimen>
+    <dimen name="mode_chip_minWidth">81.0dip</dimen>
+    <dimen name="more_modes_name_side_margin">4.0dip</dimen>
+    <dimen name="more_modes_name_top_margin">8.0dip</dimen>
+    <dimen name="optionsbar_category_height">44.0dip</dimen>
+    <dimen name="optionsbar_category_width">44.0dip</dimen>
+    <dimen name="photo_button_inner_radius">30.0dip</dimen>
+    <dimen name="photo_button_radius">36.0dip</dimen>
+    <dimen name="photo_video_switch_size">63.0dip</dimen>
+    <dimen name="photobooth_dynamic_border">0.0dip</dimen>
+    <dimen name="photobooth_dynamic_max_radius">38.0dip</dimen>
+    <dimen name="photobooth_dynamic_min_radius">4.0dip</dimen>
+    <dimen name="photobooth_shutter_border">6.0dip</dimen>
+    <dimen name="photobooth_shutter_icon_size">18.0dip</dimen>
+    <dimen name="photobooth_shutter_pressed_border">10.0dip</dimen>
+    <dimen name="photobooth_shutter_pressed_radius">33.0dip</dimen>
+    <dimen name="photobooth_shutter_radius">33.0dip</dimen>
+    <dimen name="timelapse_tick_mark_length">3.0dip</dimen>
+    <dimen name="timelapse_tick_mark_padding_to_bound">8.0dip</dimen>
+    <dimen name="timelapse_tick_mark_rect_round_radius">2.0dip</dimen>
+    <dimen name="topbar_height">44.0dip</dimen>
+    <dimen name="video_button_inner_radius">8.0dip</dimen>
+    <dimen name="video_button_stop_square_size">24.0dip</dimen>
+</resources>

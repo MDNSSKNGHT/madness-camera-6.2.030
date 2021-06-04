@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">صور متسلسلة (%1$d صورة)</item>
+        <item quantity="zero">صور متسلسلة (%1$d صورة)</item>
+        <item quantity="one">صور متسلسلة (صورة واحدة (%1$d))</item>
+        <item quantity="two">صور متسلسلة (صورتان (%1$d))</item>
+        <item quantity="few">صور متسلسلة (%1$d صور)</item>
+        <item quantity="many">صور متسلسلة (%1$d صورة)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d وجه.</item>
+        <item quantity="zero">%1$d وجه.</item>
+        <item quantity="one">%1$d وجه.</item>
+        <item quantity="two">وجهان (%1$d).</item>
+        <item quantity="few">%1$d وجوه.</item>
+        <item quantity="many">%1$d وجهًا.</item>
+    </plurals>
+</resources>

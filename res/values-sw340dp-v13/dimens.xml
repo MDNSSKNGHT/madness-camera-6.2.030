@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_bar_content_size">78.0dip</dimen>
+    <dimen name="bottom_bar_side_content_size">72.0dip</dimen>
+    <dimen name="mode_chip_insetLeft">1.0dip</dimen>
+    <dimen name="mode_chip_insetRight">1.0dip</dimen>
+    <dimen name="mode_chip_minWidth">77.0dip</dimen>
+    <dimen name="more_modes_font_size">14.0dip</dimen>
+    <dimen name="more_modes_grid_bottom_padding">21.0dip</dimen>
+</resources>

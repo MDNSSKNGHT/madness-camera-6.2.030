@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.camera.ui.views.CameraAppRootLayout android:id="@id/camera_app_root" android:tag="uiRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/capture_overlay_layout" android:tag="previewUi" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="preview">
+        <com.google.android.apps.camera.faceboxes.FaceView android:id="@id/face_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.ui.gridlines.GridLinesUi android:layout_gravity="center_horizontal" android:id="@id/grid_lines" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/module_layout" android:tag="moduleUi" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.ui.views.CaptureAnimationOverlay android:id="@id/capture_animation_overlay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.progressoverlay.ProgressOverlay android:id="@id/progress_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.focusindicator.FocusIndicatorView android:id="@id/focus_indicator_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/preview_scrim" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    </com.google.android.apps.camera.ui.widget.TracedFrameLayout>
+    <FrameLayout android:id="@id/uncovered_preview_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="uncoveredPreview">
+        <com.google.android.apps.camera.ui.wirers.PreviewOverlay android:id="@id/preview_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.camera.evcomp.EvCompView android:id="@id/evcomp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+        <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/smarts_ui_overlay" android:tag="iris" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="preview">
+            <com.google.android.apps.camera.uiutils.ReplaceableView android:id="@id/smarts_ui_replaceableview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.apps.camera.ui.widget.TracedFrameLayout>
+        <TextView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/recording_time" android:visibility="gone" style="@style/onVideoRecordingCounter" />
+        <ViewStub android:layout_gravity="bottom|center" android:id="@id/burst_chip_viewstub" android:layout="@layout/burst_chip_layout" android:inflatedId="@id/burst_chip" android:layout_width="fill_parent" android:layout_height="@dimen/burst_chip_holder_height" android:layout_marginBottom="@dimen/burst_chip_bottom_padding" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/frame_layout_for_notification_chip" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="fullScreen">
+        <com.google.android.apps.camera.uiutils.ReplaceableView android:id="@id/notification_chip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </FrameLayout>
+    <com.google.android.apps.camera.zoomui.ZoomUi android:id="@id/zoom_ui" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/zoom_ui_height" android:layout_alignParentBottom="true" custom:gca_box="zoomSlider" />
+    <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/smarts_preview_overlay" android:tag="iris" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="preview">
+        <com.google.android.apps.camera.uiutils.ReplaceableView android:id="@id/iris_overlay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </com.google.android.apps.camera.ui.widget.TracedFrameLayout>
+    <com.google.android.apps.camera.uiutils.ReplaceableView android:id="@id/fullscreen_selfie_flash" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.apps.camera.ui.views.CameraAppRootLayout>

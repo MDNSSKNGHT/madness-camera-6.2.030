@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PageIndicatorViewStyle">
+        <item name="pageIndicatorDotSpacing">7.799988dip</item>
+        <item name="pageIndicatorDotRadius">2.0999756dip</item>
+        <item name="pageIndicatorDotRadiusSelected">3.0999756dip</item>
+        <item name="pageIndicatorDotColor">?android:colorForeground</item>
+        <item name="pageIndicatorDotColorSelected">?android:colorForeground</item>
+        <item name="pageIndicatorDotFadeWhenIdle">true</item>
+        <item name="pageIndicatorDotFadeOutDelay">1000</item>
+        <item name="pageIndicatorDotFadeOutDuration">250</item>
+        <item name="pageIndicatorDotFadeInDuration">100</item>
+        <item name="pageIndicatorDotShadowColor">#66000000</item>
+        <item name="pageIndicatorDotShadowRadius">2.0px</item>
+        <item name="pageIndicatorDotShadowDx">1.0px</item>
+        <item name="pageIndicatorDotShadowDy">1.0px</item>
+    </style>
+</resources>

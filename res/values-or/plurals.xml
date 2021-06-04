@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">ବର୍ଷ୍ଟ (%1$d ଫଟୋ)</item>
+        <item quantity="one">ବର୍ଷ୍ଟ (%1$d ଫଟୋ)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$dଟି ମୁହଁ।</item>
+        <item quantity="one">%1$dଟି ମୁହଁ।</item>
+    </plurals>
+</resources>

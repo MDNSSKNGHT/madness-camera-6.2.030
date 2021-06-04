@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Qatorasiga (%1$d ta surat)</item>
+        <item quantity="one">Qatorasiga (%1$d ta surat)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d ta yuz.</item>
+        <item quantity="one">%1$d ta yuz.</item>
+    </plurals>
+</resources>
