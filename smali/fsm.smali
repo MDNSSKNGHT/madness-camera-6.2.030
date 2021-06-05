@@ -610,6 +610,10 @@
 
     check-cast p1, Ljava/lang/Integer;
 
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
     invoke-static {p1}, Loxl;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
