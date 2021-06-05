@@ -663,8 +663,6 @@
 
     iget-boolean v1, v1, Lmpi;->e:Z
 
-    const/4 v1, 0x0
-
     if-eqz v1, :cond_7
 
     invoke-virtual {p3}, Lnyp;->b()Z
