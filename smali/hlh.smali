@@ -1688,10 +1688,6 @@
     const/4 v3, 0x1
 
     :goto_0
-    sget-object v8, Lkgq;->h:Lkgq;
-
-    if-eq v0, v8, :cond_3
-
     sget-object v8, Lkgq;->b:Lkgq;
 
     if-ne v0, v8, :cond_4
@@ -2277,6 +2273,14 @@
     iget-object v5, v1, Lhlh;->F:Lhmj;
 
     invoke-direct {v1, v2, v4, v5, v3}, Lhlh;->a(Lobk;Llsg;Lhmj;Z)V
+
+    iget-object v2, v1, Lhlh;->ao:Lobk;
+
+    iget-object v3, v1, Lhlh;->e:Llsg;
+
+    iget-object v4, v1, Lhlh;->h:Lhmj;
+
+    invoke-direct {v1, v2, v3, v4, v8}, Lhlh;->a(Lobk;Llsg;Lhmj;Z)V
 
     iget-object v2, v1, Lhlh;->ap:Lobk;
 
