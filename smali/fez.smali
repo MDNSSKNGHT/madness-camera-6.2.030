@@ -346,16 +346,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lfez;->t:Ljava/util/List;
-
-    const-string v1, "pref_camera_hdrplus_option_available_key"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-nez v4, :cond_c
 
     iget-object v0, p0, Lfez;->t:Ljava/util/List;
 
     const-string v1, "pref_video_stabilization_key"
 
+    :cond_c
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
