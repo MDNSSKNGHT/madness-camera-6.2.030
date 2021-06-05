@@ -1435,13 +1435,13 @@
 
     move-result-object v1
 
-    const/16 v2, 0x26
+    const/16 v2, 0x20
 
     invoke-interface {p0, v2}, Lmmb;->a(I)Ljava/util/List;
 
     move-result-object v3
 
-    const/16 v4, 0x20
+    const/16 v4, 0x23
 
     invoke-interface {p0, v4}, Lmmb;->a(I)Ljava/util/List;
 
