@@ -317,7 +317,7 @@
 
     move-result-object v1
 
-    const-string v7, "setActual_exposure_time_ms "
+    const-string v7, "setActual_exposure_time_ms"
 
     invoke-static {v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -325,7 +325,7 @@
 
     move-result-object v1
 
-    const-string v2, "setActual_analog_gain "
+    const-string v2, "setActual_analog_gain"
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -333,7 +333,7 @@
 
     move-result-object v1
 
-    const-string v2, "setApplied_digital_gain "
+    const-string v2, "setApplied_digital_gain"
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -341,7 +341,7 @@
 
     move-result-object v1
 
-    const-string v2, "setPost_raw_digital_gain "
+    const-string v2, "setPost_raw_digital_gain"
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -530,34 +530,42 @@
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_7
+    if-nez v1, :cond_7
 
     invoke-virtual {v0, v5}, Lcom/google/googlex/gcam/FrameMetadata;->setScene_flicker(I)V
 
     goto :goto_4
 
     :cond_7
-    if-ne p1, v5, :cond_8
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-ne v1, v5, :cond_8
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setScene_flicker(I)V
 
     goto :goto_4
 
     :cond_8
-    if-eq p1, v2, :cond_9
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
+    move-result p1
+
+    if-ne p1, v2, :cond_9
+
+    invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setScene_flicker(I)V
+
+    goto :goto_4
+
+    :cond_9
     const-string p1, "MadnessKnight\'s MetadataConverterMod"
 
     const-string v1, "Unexpected STATISTICS_SCENE_FLICKER type!"
 
     invoke-static {p1, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_4
-
-    :cond_9
-    invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setScene_flicker(I)V
 
     goto :goto_4
 
@@ -1853,16 +1861,14 @@
     return-object p0
 .end method
 
-.method private static getAwbGains(Lmpz;[I)[F
-    .locals 4
+.method public static getAwbInfoCaptured(Lmpz;)Lcom/google/googlex/gcam/AwbInfo;
+    .locals 10
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "mpz",
-            "iArr"
+            "mpz"
         }
     .end annotation
 
@@ -1870,67 +1876,72 @@
 
     new-array v1, v0, [F
 
-    sget-object v2, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_GAINS:Landroid/hardware/camera2/CaptureResult$Key;
+    const/16 v2, 0x9
 
-    invoke-interface {p0, v2}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    new-array v3, v2, [F
 
-    move-result-object p0
+    new-instance v4, Lcom/google/googlex/gcam/AwbInfo;
 
-    check-cast p0, Landroid/hardware/camera2/params/RggbChannelVector;
+    invoke-direct {v4}, Lcom/google/googlex/gcam/AwbInfo;-><init>()V
 
-    if-eqz p0, :cond_1
+    const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    invoke-virtual {v4, v5}, Lcom/google/googlex/gcam/AwbInfo;->setColor_temp(I)V
+
+    invoke-virtual {v4, v5}, Lcom/google/googlex/gcam/AwbInfo;->setMethod(I)V
+
+    sget-object v6, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_GAINS:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-interface {p0, v6}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/hardware/camera2/params/RggbChannelVector;
+
+    sget-object v7, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_TRANSFORM:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-interface {p0, v7}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    const/4 v8, 0x0
+
+    if-eqz v6, :cond_1
+
+    invoke-static {}, LMetadataConverterMod;->setChoiseAwbGains()I
+
+    move-result v9
+
+    if-nez v9, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object p0, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
+
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->evenOddIndexMap:[I
+
+    move v5, v8
 
     :goto_0
-    if-ge v2, v0, :cond_0
+    if-ge v5, v0, :cond_2
 
-    aget v3, p1, v2
+    aget v9, p0, v5
 
-    invoke-virtual {p0, v3}, Landroid/hardware/camera2/params/RggbChannelVector;->getComponent(I)F
+    invoke-virtual {v6, v9}, Landroid/hardware/camera2/params/RggbChannelVector;->getComponent(I)F
 
-    move-result v3
+    move-result v9
 
-    aput v3, v1, v2
+    aput v9, v1, v5
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_0
-    return-object v1
-
     :cond_1
-    const-string p0, "MadnessKnight\'s MetadataConverterMod"
-
-    const-string p1, "CaptureResult missing COLOR_CORRECTION_GAINS."
-
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-static {v1, p0}, Ljava/util/Arrays;->fill([FF)V
-
-    return-object v1
-.end method
-
-.method private static getAwbGainsAlt(Lmpz;[I)[F
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "mpz",
-            "iArr"
-        }
-    .end annotation
-
-    const/4 p1, 0x4
-
-    new-array p1, p1, [F
-
+    :goto_1
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_NEUTRAL_COLOR_POINT:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v0}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1939,158 +1950,64 @@
 
     check-cast p0, [Landroid/util/Rational;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    aget-object v0, p0, v8
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0}, Landroid/util/Rational;->floatValue()F
 
-    const/4 v1, 0x0
+    move-result v0
 
-    aget-object v2, p0, v1
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    invoke-virtual {v2}, Landroid/util/Rational;->floatValue()F
+    div-float v0, v6, v0
 
-    move-result v2
+    aput v0, v1, v8
 
-    div-float v2, v0, v2
+    aput v6, v1, v5
 
-    aput v2, p1, v1
+    const/4 v0, 0x2
 
-    const/4 v1, 0x1
+    aput v6, v1, v0
 
-    aput v0, p1, v1
+    const/4 v5, 0x3
 
-    const/4 v1, 0x2
-
-    aput v0, p1, v1
-
-    const/4 v2, 0x3
-
-    aget-object p0, p0, v1
+    aget-object p0, p0, v0
 
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result p0
 
-    div-float/2addr v0, p0
+    div-float/2addr v6, p0
 
-    aput v0, p1, v2
+    aput v6, v1, v5
 
-    return-object p1
+    :cond_2
+    if-eqz v7, :cond_3
 
-    :cond_0
-    const-string p0, "MadnessKnight\'s MetadataConverterMod"
+    new-array p0, v2, [Landroid/util/Rational;
 
-    const-string v1, "CaptureResult missing COLOR_CORRECTION_GAINS."
+    invoke-virtual {v7, p0, v8}, Landroid/hardware/camera2/params/ColorSpaceTransform;->copyElements([Landroid/util/Rational;I)V
 
-    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :goto_2
+    if-ge v8, v2, :cond_3
 
-    invoke-static {p1, v0}, Ljava/util/Arrays;->fill([FF)V
+    aget-object v0, p0, v8
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Landroid/util/Rational;->floatValue()F
 
-.method public static getAwbInfoCaptured(Lmpz;)Lcom/google/googlex/gcam/AwbInfo;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mpz"
-        }
-    .end annotation
+    move-result v0
 
-    new-instance v0, Lcom/google/googlex/gcam/AwbInfo;
+    aput v0, v3, v8
 
-    invoke-direct {v0}, Lcom/google/googlex/gcam/AwbInfo;-><init>()V
+    add-int/lit8 v8, v8, 0x1
 
-    sget-object v1, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
+    goto :goto_2
 
-    iget-object v1, v1, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->evenOddIndexMap:[I
+    :cond_3
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/AwbInfo;->setGains([F)V
 
-    invoke-static {}, LMetadataConverterMod;->setChoiseAwbGains()I
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/AwbInfo;->setRgb2rgb([F)V
 
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {p0, v1}, LMetadataConverterMod;->getAwbGains(Lmpz;[I)[F
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p0, v1}, LMetadataConverterMod;->getAwbGainsAlt(Lmpz;[I)[F
-
-    move-result-object v1
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AwbInfo;->setGains([F)V
-
-    invoke-static {p0}, LMetadataConverterMod;->getAwbRgb2Rgb(Lmpz;)[F
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lcom/google/googlex/gcam/AwbInfo;->setRgb2rgb([F)V
-
-    return-object v0
-.end method
-
-.method private static getAwbRgb2Rgb(Lmpz;)[F
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mpz"
-        }
-    .end annotation
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_TRANSFORM:Landroid/hardware/camera2/CaptureResult$Key;
-
-    invoke-interface {p0, v0}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/hardware/camera2/params/ColorSpaceTransform;
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p0}, LMetadataConverterMod;->convertToFloatArray(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "MadnessKnight\'s MetadataConverterMod"
-
-    const-string v0, "CaptureResult missing COLOR_CORRECTION_TRANSFORM."
-
-    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/16 p0, 0x9
-
-    new-array p0, p0, [F
-
-    fill-array-data p0, :array_0
-
-    return-object p0
-
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-        0x0
-        0x0
-        0x3f800000    # 1.0f
-        0x0
-        0x0
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    return-object v4
 .end method
 
 .method private static getCameraMetadataFromNothing()Lmmb;
