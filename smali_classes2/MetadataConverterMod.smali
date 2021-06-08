@@ -2522,7 +2522,7 @@
     move p0, v3
 
     :goto_1
-    sget-object v4, Lmmt;->BACK:Lmmt;
+    sget-object v4, Lmmt;->b:Lmmt;
 
     if-eq v0, v4, :cond_7
 
