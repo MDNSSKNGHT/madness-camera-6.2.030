@@ -8,16 +8,6 @@
 
 .field public static GAwb:I
 
-.field public static fixAFSceneResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-.field public static fixDistCCKey:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-.field public static fixDistCRKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-.field public static fixOISReqKey:Landroid/hardware/camera2/CaptureRequest$Key;
-
-.field public static fixOISResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
 .field public static sAutoHDRP:I
 
 .field public static sBack:Lmmb;
@@ -88,8 +78,6 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {}, Lcom/FixBSG;->getInputStyle()V
-
-    invoke-static {}, Lcom/FixBSG;->fixKey()V
 
     const/4 v0, -0x1
 
@@ -637,62 +625,6 @@
     invoke-static {}, Lcom/FixBSG;->getJPGQuality()V
 
     return-void
-.end method
-
-.method public static fixKey()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_DISTORTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixDistCCKey:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_DISTORTION:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixDistCRKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->STATISTICS_OIS_DATA_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixOISReqKey:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_OIS_DATA_MODE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixOISResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_SCENE_CHANGE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixAFSceneResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_RADIAL_DISTORTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixDistCCKey:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_RADIAL_DISTORTION:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixDistCRKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->LENS_OPTICAL_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixOISReqKey:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_OPTICAL_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixOISResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    sput-object v0, Lcom/FixBSG;->fixAFSceneResKey:Landroid/hardware/camera2/CaptureResult$Key;
-
-    goto :goto_0
 .end method
 
 .method public static getInputModel(Lmmb;)V
