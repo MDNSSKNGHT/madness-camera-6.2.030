@@ -1112,11 +1112,11 @@
 
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
 
-    const-string v2, "Flame"
+    const-string v2, "Bonito"
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
 
-    const-string v3, "Pixel 4 XL"
+    const-string v3, "Pixel 3a XL"
 
     invoke-virtual {v0, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
 
