@@ -348,9 +348,9 @@
 
     const-string v1, "pref_video_stabilization_key"
 
-    :cond_c
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    :cond_c
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
