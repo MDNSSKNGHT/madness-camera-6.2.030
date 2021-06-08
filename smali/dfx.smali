@@ -603,28 +603,6 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Ldfx;->r:Lgnf;
-
-    invoke-virtual {v1}, Lgnf;->b_()Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lgne;->g:Lgne;
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v1, 0x1
-
-    sput v1, Lcom/FixBSG;->GAwb:I
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    sput v1, Lcom/FixBSG;->GAwb:I
-
-    :goto_0
     iget-object v1, v0, Ldfx;->d:Lcom/google/googlex/gcam/Gcam;
 
     invoke-static {v1}, Lcom/FixBSG;->UpdateCameras(Lcom/google/googlex/gcam/Gcam;)Lcom/google/googlex/gcam/Gcam;
