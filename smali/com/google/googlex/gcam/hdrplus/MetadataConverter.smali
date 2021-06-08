@@ -2471,11 +2471,11 @@
 .method public convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
     .locals 0
 
-    invoke-static {p1, p2, p3, p4}, LMetadataConverterMod;->convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+    invoke-static {p1, p2, p3}, LMetadataConverterMod;->convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public convertToSpatialGainMap(Lmpz;)Lcom/google/googlex/gcam/SpatialGainMap;
