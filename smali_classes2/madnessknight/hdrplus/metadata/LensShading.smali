@@ -1,10 +1,10 @@
-.class public Lcom/madnessknight/hdrplus/metadata/GainMap;
+.class public Lmadnessknight/hdrplus/metadata/LensShading;
 .super Ljava/lang/Object;
-.source "GainMap.java"
+.source "LensShading.java"
 
 
 # static fields
-.field private static S21U_ISO70:[[[F
+.field public static S21U_ISO70:[[[F
 
 
 # direct methods
@@ -371,7 +371,7 @@
 
     aput-object v2, v1, v9
 
-    sput-object v1, Lcom/madnessknight/hdrplus/metadata/GainMap;->S21U_ISO70:[[[F
+    sput-object v1, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO70:[[[F
 
     return-void
 
@@ -1476,83 +1476,4 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static getColumnNum()I
-    .locals 2
-
-    sget-object v0, Lcom/madnessknight/hdrplus/metadata/GainMap;->S21U_ISO70:[[[F
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public static getGainPerPosition(III)F
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "plane",
-            "row",
-            "column"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/madnessknight/hdrplus/metadata/GainMap;->S21U_ISO70:[[[F
-
-    aget-object p0, v0, p0
-
-    aget-object p0, p0, p1
-
-    aget p0, p0, p2
-
-    float-to-double p1, p0
-
-    const-wide/high16 v0, 0x3ff8000000000000L    # 1.5
-
-    cmpg-double p1, p1, v0
-
-    if-gez p1, :cond_0
-
-    const p1, 0x3fb19ce0    # 1.3876f
-
-    mul-float/2addr p0, p1
-
-    :cond_0
-    return p0
-.end method
-
-.method public static getPlanesNum()I
-    .locals 1
-
-    sget-object v0, Lcom/madnessknight/hdrplus/metadata/GainMap;->S21U_ISO70:[[[F
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public static getRowNum()I
-    .locals 2
-
-    sget-object v0, Lcom/madnessknight/hdrplus/metadata/GainMap;->S21U_ISO70:[[[F
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    array-length v0, v0
-
-    return v0
 .end method
