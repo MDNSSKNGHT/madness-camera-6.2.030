@@ -36,6 +36,8 @@
 
 .field public static sGetMaxISO:F
 
+.field public static sGetModel:Ljava/lang/String;
+
 .field public static sGetPost_raw_digital_gain:F
 
 .field public static sJPGQuality:I
@@ -607,10 +609,8 @@
     return-void
 .end method
 
-.method public static getInputModel(Lmmb;)V
-    .locals 2
-
-    invoke-static {p0}, Lcom/FixBSG;->GetLens(Lmmb;)V
+.method public static getInputModel()V
+    .locals 3
 
     sget v0, Lcom/FixBSG;->sCam:I
 
@@ -618,209 +618,130 @@
 
     const-string v0, "model_b_key"
 
-    invoke-static {v0}, Lcom/FixBSG;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
-    const/4 v1, 0x0
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x5
-
-    if-eq v0, v1, :cond_5
-
-    const/4 v1, 0x6
-
-    if-eq v0, v1, :cond_6
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x9
-
-    if-eq v0, v1, :cond_9
-
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - None "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    :goto_1
-    return-void
+    goto :goto_0
 
     :cond_0
     const-string v0, "model_f_key"
 
+    :goto_0
     invoke-static {v0}, Lcom/FixBSG;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
-    goto :goto_0
+    const-string v1, "Google"
 
-    :cond_1
-    const-string v0, "LGE"
+    packed-switch v0, :pswitch_data_0
 
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    const-string v0, "bullhead"
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Nexus 5X "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     goto :goto_1
 
-    :cond_2
-    const-string v0, "Huawei"
+    :pswitch_0
+    const-string v0, "Flame"
 
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
+    const-string v2, "Pixel 4 XL"
+
+    goto :goto_1
+
+    :pswitch_1
+    const-string v0, "Coral"
+
+    const-string v2, "Pixel 4"
+
+    goto :goto_1
+
+    :pswitch_2
+    const-string v0, "Bonito"
+
+    const-string v2, "Pixel 3a XL"
+
+    goto :goto_1
+
+    :pswitch_3
+    const-string v0, "Sargo"
+
+    const-string v2, "Pixel 3a"
+
+    goto :goto_1
+
+    :pswitch_4
+    const-string v0, "Crosshatch"
+
+    const-string v2, "Pixel 3 XL"
+
+    goto :goto_1
+
+    :pswitch_5
+    const-string v0, "Blueline"
+
+    const-string v2, "Pixel 3"
+
+    goto :goto_1
+
+    :pswitch_6
+    const-string v0, "Taimen"
+
+    const-string v2, "Pixel 2 XL"
+
+    goto :goto_1
+
+    :pswitch_7
+    const-string v0, "Walleye"
+
+    const-string v2, "Pixel 2"
+
+    goto :goto_1
+
+    :pswitch_8
+    const-string v0, "Marlin"
+
+    const-string v2, "Pixel XL"
+
+    goto :goto_1
+
+    :pswitch_9
+    const-string v1, "Huawei"
 
     const-string v0, "Angler"
 
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Nexus 6P "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
+    const-string v2, "Nexus 6P"
 
     goto :goto_1
 
-    :cond_3
-    const-string v0, "google"
+    :pswitch_a
+    const-string v1, "LGE"
 
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
+    const-string v0, "Bullhead"
 
-    const-string v0, "marlin"
+    const-string v2, "Nexus 5X"
 
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel XL "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_4
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "walleye"
+    :goto_1
+    sput-object v1, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
 
     sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
 
-    const-string v0, " (GCam - Pixel II "
+    sput-object v2, Lcom/FixBSG;->sGetModel:Ljava/lang/String;
 
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
+    return-void
 
-    goto :goto_1
-
-    :cond_5
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "taimen"
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel II XL "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_6
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "blueline"
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel III "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_7
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "crosshatch"
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel III XL "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_8
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "sargo"
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel III+ "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_9
-    const-string v0, "google"
-
-    sput-object v0, Lcom/FixBSG;->sGetMake:Ljava/lang/String;
-
-    const-string v0, "bonito"
-
-    sput-object v0, Lcom/FixBSG;->sGetDevice:Ljava/lang/String;
-
-    const-string v0, " (GCam - Pixel III+ XL "
-
-    sput-object v0, Lcom/FixBSG;->sInExifModel:Ljava/lang/String;
-
-    goto :goto_1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public static getJPGQuality()V
