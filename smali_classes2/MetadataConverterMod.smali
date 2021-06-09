@@ -667,7 +667,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_11
+    if-nez p1, :cond_10
 
     sget-object p1, Landroid/hardware/camera2/CaptureResult;->SENSOR_DYNAMIC_BLACK_LEVEL:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -682,26 +682,11 @@
     goto :goto_6
 
     :cond_f
-    invoke-static {}, Lmadnessknight/DeviceProperties;->isExynos()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_10
-
-    new-array p1, v1, [F
-
-    fill-array-data p1, :array_0
-
     invoke-virtual {v0, p1}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
     goto :goto_8
 
     :cond_10
-    invoke-virtual {v0, p1}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
-
-    goto :goto_8
-
-    :cond_11
     :goto_6
     sget-object p1, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
@@ -715,12 +700,12 @@
 
     check-cast p1, Landroid/hardware/camera2/params/BlackLevelPattern;
 
-    if-eqz p1, :cond_13
+    if-eqz p1, :cond_12
 
     new-array v4, v1, [F
 
     :goto_7
-    if-ge v3, v1, :cond_12
+    if-ge v3, v1, :cond_11
 
     rem-int/lit8 v6, v3, 0x2
 
@@ -738,11 +723,24 @@
 
     goto :goto_7
 
-    :cond_12
+    :cond_11
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    :cond_13
+    :cond_12
     :goto_8
+    invoke-static {}, Lmadnessknight/DeviceProperties;->isExynos()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_13
+
+    new-array p1, v1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-virtual {v0, p1}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
+
+    :cond_13
     sget-object p1, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, p1}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1112,8 +1110,6 @@
 
     :cond_1b
     return-object v0
-
-    nop
 
     :array_0
     .array-data 4
