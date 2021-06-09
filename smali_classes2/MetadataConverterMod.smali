@@ -1870,7 +1870,7 @@
 .end method
 
 .method private static getAnalogAndDigitalGain(Lmpz;)[F
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -1892,39 +1892,37 @@
 
     move-result p0
 
+    int-to-float p0, p0
+
     sget-object v0, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
     iget v0, v0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->minIso:I
+
+    int-to-float v0, v0
 
     sget-object v1, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
     iget v1, v1, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->maxAnalogIso:I
 
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    if-le p0, v1, :cond_0
-
     int-to-float v1, v1
 
-    int-to-float v0, v0
+    cmpl-float v2, p0, v1
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-lez v2, :cond_0
 
     div-float v0, v1, v0
 
-    int-to-float p0, p0
-
     div-float/2addr p0, v1
 
-    invoke-static {p0, v2}, Ljava/lang/Math;->max(FF)F
+    invoke-static {p0, v3}, Ljava/lang/Math;->max(FF)F
 
-    move-result v2
+    move-result v3
 
     goto :goto_0
 
     :cond_0
-    int-to-float p0, p0
-
-    int-to-float v0, v0
-
     div-float v0, p0, v0
 
     :goto_0
@@ -1938,7 +1936,7 @@
 
     const/4 v0, 0x1
 
-    aput v2, p0, v0
+    aput v3, p0, v0
 
     return-object p0
 .end method
@@ -2181,7 +2179,11 @@
 
     move-result-object v0
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
 
@@ -2190,50 +2192,41 @@
 
     goto :goto_0
 
-    :cond_1
-    return-object v0
-
     :catch_0
     move-exception v1
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    :catch_1
+    move-exception v1
 
-    const-string v3, "Couldn\'t create camera metadata! ["
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraAccessException;->printStackTrace()V
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    move-result-object v2
+    :catch_2
+    move-exception v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
-    move-result-object v1
+    goto :goto_1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    :catch_3
+    move-exception v1
 
-    move-result-object v1
+    invoke-virtual {v1}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    move-result-object v1
+    :catch_4
+    move-exception v1
 
-    const-string v2, "]"
+    invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "MadnessKnight\'s MetadataConverterMod"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_1
+    :goto_1
     return-object v0
 .end method
 
@@ -3072,15 +3065,15 @@
 .end method
 
 .method private static isProbablyUsingAntibanding(FF)Z
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
             0x0
         }
         names = {
-            "f",
-            "f2"
+            "exposure",
+            "factor"
         }
     .end annotation
 
@@ -3089,6 +3082,8 @@
     add-float/2addr v0, p1
 
     cmpl-float v0, p0, v0
+
+    const/4 v1, 0x0
 
     if-ltz v0, :cond_0
 
@@ -3114,14 +3109,10 @@
 
     if-gez p0, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
+    const/4 v1, 0x1
 
     :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v1
 .end method
 
 .method private static nsToMsFloat(J)F
