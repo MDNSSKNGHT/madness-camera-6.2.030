@@ -1757,7 +1757,7 @@
 
     if-eqz v0, :cond_4
 
-    sget-object p0, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO70:[[[F
+    sget-object p0, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO820:[[[F
 
     aget-object p0, p0, v3
 
@@ -1765,7 +1765,7 @@
 
     array-length p0, p0
 
-    sget-object v0, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO70:[[[F
+    sget-object v0, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO820:[[[F
 
     aget-object v0, v0, v3
 
@@ -1790,7 +1790,7 @@
     :goto_2
     if-ge v6, p0, :cond_1
 
-    sget-object v7, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO70:[[[F
+    sget-object v7, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO820:[[[F
 
     aget-object v7, v7, v2
 
