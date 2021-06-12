@@ -1689,6 +1689,7 @@
     <public type="raw" name="video_pause" id="0x7f0a0018" />
     <public type="raw" name="video_start" id="0x7f0a0019" />
     <public type="raw" name="video_stop" id="0x7f0a001a" />
+    <public type="raw" name="rampatcher62030" id="0x7f0a001b" />
     <public type="array" name="android_wear_capabilities" id="0x7f0b0000" />
     <public type="array" name="camcorder_profile_names" id="0x7f0b0001" />
     <public type="array" name="camera_id_entryvalues" id="0x7f0b0002" />

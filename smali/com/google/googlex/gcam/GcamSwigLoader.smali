@@ -7,6 +7,8 @@
 .method static constructor <clinit>()V
     .locals 1
 
+    invoke-static {}, Lcom/eszdman/rampatcher/PatcherSession;->Initialize()V
+
     const-string v0, "gcam_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
