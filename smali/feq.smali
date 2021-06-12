@@ -1883,7 +1883,9 @@
     invoke-direct {p0, v1, v2}, Lfeq;->a(Landroid/preference/PreferenceGroup;Landroid/preference/Preference;)Z
 
     :cond_1
-    nop
+    const-string v1, "pref_category_library"
+
+    invoke-direct {p0, v1}, Lfeq;->b(Ljava/lang/String;)V
 
     const-string v1, "pref_category_advanced"
 

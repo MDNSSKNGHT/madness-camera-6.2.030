@@ -903,4 +903,6 @@ Move device slowly"</string>
     <string name="pref_darkmode_title">Dark mode</string>
     <string name="pref_maxbright_title">Max screen brightness</string>
     <string name="pref_denoise_title">Amplify denoise</string>
+    <string name="pref_category_library">Image Processing</string>
+    <string name="pref_category_library_summary">Also known as Ram Patcher, modifies library parameters in order to enhanced the final photo</string>
 </resources>
