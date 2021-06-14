@@ -312,6 +312,7 @@
         <item>A4703D0AD7A3B03F</item>
     </string-array>
     <string-array name="pref_lib_contrast2_entries">
+        <item>OFF</item>
         <item>0.40</item>
         <item>0.41</item>
         <item>0.42</item>
