@@ -18,7 +18,7 @@
 # instance fields
 .field public final a:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
-.field private final d:Lmmb;
+.field public final d:Lmmb;
 
 .field private final e:I
 

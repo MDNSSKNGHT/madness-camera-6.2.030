@@ -1760,6 +1760,18 @@
 
     invoke-interface {v0, v1}, Llzp;->a(Ljava/lang/String;)V
 
+    iget-object v0, v12, Ldea;->d:Ldfa;
+
+    iget-object v0, v0, Ldfa;->d:Lmmb;
+
+    invoke-interface/range {p10 .. p10}, Lhiy;->a()Lmqc;
+
+    move-result-object v1
+
+    move-object/from16 v2, p2
+
+    invoke-static/range {v0 .. v2}, Lmadnessknight/hdrplus/metadata/DynamicRange;->ImproveDynamicRanging(Lmmb;Lmpz;Lcom/google/googlex/gcam/BurstSpec;)V
+
     invoke-virtual/range {p2 .. p2}, Lcom/google/googlex/gcam/BurstSpec;->getFrame_requests()Lcom/google/googlex/gcam/FrameRequestVector;
 
     move-result-object v3
