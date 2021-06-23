@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    const-string v1, "org.codeaurora.snapcam"
+    const-string v1, "com.google.android.GoogleCameraEng"
 
     const-string v2, "camera.eng"
 
