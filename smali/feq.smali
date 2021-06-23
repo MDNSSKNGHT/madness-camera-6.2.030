@@ -1711,9 +1711,7 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0xe
-
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "Could not add "
 
@@ -1750,9 +1748,7 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0x6
-
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "Added "
 

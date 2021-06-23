@@ -601,6 +601,8 @@
 
     const-string p3, "camera.enable_micro"
 
+    const/4 p2, 0x0
+
     invoke-direct {p1, p3, p2}, Lcvy;-><init>(Ljava/lang/String;Z)V
 
     iput-object p1, p0, Lcgm;->U:Lcvy;
@@ -870,7 +872,7 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     return v0
 

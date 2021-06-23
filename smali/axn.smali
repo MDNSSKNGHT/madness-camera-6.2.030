@@ -64,7 +64,9 @@
 
     iget-object v4, p0, Laxn;->e:Lqdx;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lgns;->o()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
