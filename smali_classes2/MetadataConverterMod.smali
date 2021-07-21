@@ -6,10 +6,24 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "MadnessKnight\'s MetadataConverterMod"
 
+.field private static final deviceProps:Lmadnessknight/util/DeviceProperties;
+
 .field public static metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lmadnessknight/util/DeviceProperties;
+
+    invoke-direct {v0}, Lmadnessknight/util/DeviceProperties;-><init>()V
+
+    sput-object v0, LMetadataConverterMod;->deviceProps:Lmadnessknight/util/DeviceProperties;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -169,6 +183,70 @@
 
     :cond_3
     return v0
+.end method
+
+.method public static convertToColorSpaceTransform([F)Landroid/hardware/camera2/params/ColorSpaceTransform;
+    .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fArr"
+        }
+    .end annotation
+
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x9
+
+    if-ne v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const-string v3, "ccm must have length %s."
+
+    invoke-static {v0, v3, v2}, Lohr;->a(ZLjava/lang/String;I)V
+
+    new-array v0, v2, [Landroid/util/Rational;
+
+    :goto_1
+    if-ge v1, v2, :cond_1
+
+    new-instance v3, Landroid/util/Rational;
+
+    aget v4, p0, v1
+
+    const v5, 0x461c4000    # 10000.0f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    const/16 v5, 0x2710
+
+    invoke-direct {v3, v4, v5}, Landroid/util/Rational;-><init>(II)V
+
+    aput-object v3, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-direct {p0, v0}, Landroid/hardware/camera2/params/ColorSpaceTransform;-><init>([Landroid/util/Rational;)V
+
+    return-object p0
 .end method
 
 .method private static convertToFloatArray(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
@@ -605,13 +683,13 @@
 
     :cond_d
     :goto_4
-    sget-object p1, Landroid/hardware/camera2/CaptureResult;->SENSOR_NOISE_PROFILE:Landroid/hardware/camera2/CaptureResult$Key;
+    new-instance p1, Lmadnessknight/hdrplus/metadata/NoiseModel;
 
-    invoke-interface {p0, p1}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    sget-object v1, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
-    move-result-object p1
+    iget-object v1, v1, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->characteristics:Lmmb;
 
-    check-cast p1, [Landroid/util/Pair;
+    invoke-direct {p1, v1, p0}, Lmadnessknight/hdrplus/metadata/NoiseModel;-><init>(Lmmb;Lmpz;)V
 
     const/4 v1, 0x4
 
@@ -630,29 +708,17 @@
 
     aget-object v7, v4, v6
 
-    aget-object v8, p1, v6
+    iget-object v8, p1, Lmadnessknight/hdrplus/metadata/NoiseModel;->Scale:[F
 
-    iget-object v8, v8, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Double;
-
-    invoke-virtual {v8}, Ljava/lang/Double;->floatValue()F
-
-    move-result v8
+    aget v8, v8, v6
 
     invoke-virtual {v7, v8}, Lcom/google/googlex/gcam/DngNoiseModel;->setScale(F)V
 
     aget-object v7, v4, v6
 
-    aget-object v8, p1, v6
+    iget-object v8, p1, Lmadnessknight/hdrplus/metadata/NoiseModel;->Offset:[F
 
-    iget-object v8, v8, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Double;
-
-    invoke-virtual {v8}, Ljava/lang/Double;->floatValue()F
-
-    move-result v8
+    aget v8, v8, v6
 
     invoke-virtual {v7, v8}, Lcom/google/googlex/gcam/DngNoiseModel;->setOffset(F)V
 
@@ -663,7 +729,9 @@
     :cond_e
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setDng_noise_model_bayer([Lcom/google/googlex/gcam/DngNoiseModel;)V
 
-    invoke-static {}, Lmadnessknight/DeviceProperties;->isSD845()Z
+    sget-object p1, LMetadataConverterMod;->deviceProps:Lmadnessknight/util/DeviceProperties;
+
+    invoke-virtual {p1}, Lmadnessknight/util/DeviceProperties;->isSD845()Z
 
     move-result p1
 
@@ -728,7 +796,9 @@
 
     :cond_12
     :goto_8
-    invoke-static {}, Lmadnessknight/DeviceProperties;->isExynos()Z
+    sget-object p1, LMetadataConverterMod;->deviceProps:Lmadnessknight/util/DeviceProperties;
+
+    invoke-virtual {p1}, Lmadnessknight/util/DeviceProperties;->isExynos()Z
 
     move-result p1
 
@@ -1110,6 +1180,8 @@
 
     :cond_1b
     return-object v0
+
+    nop
 
     :array_0
     .array-data 4
@@ -1745,7 +1817,9 @@
     return-object p0
 
     :cond_0
-    invoke-static {}, Lmadnessknight/DeviceProperties;->isExynos()Z
+    sget-object v0, LMetadataConverterMod;->deviceProps:Lmadnessknight/util/DeviceProperties;
+
+    invoke-virtual {v0}, Lmadnessknight/util/DeviceProperties;->isExynos()Z
 
     move-result v0
 
@@ -2014,7 +2088,9 @@
 
     if-eqz v4, :cond_1
 
-    invoke-static {}, Lmadnessknight/DeviceProperties;->isSD845()Z
+    sget-object v7, LMetadataConverterMod;->deviceProps:Lmadnessknight/util/DeviceProperties;
+
+    invoke-virtual {v7}, Lmadnessknight/util/DeviceProperties;->isSD845()Z
 
     move-result v7
 
@@ -3071,6 +3147,24 @@
     move-result-wide v0
 
     return-wide v0
+.end method
+
+.method public static getRedBlueSourceIndicesForCfa(I)[I
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "intValue"
+        }
+    .end annotation
+
+    invoke-static {p0}, LMetadataConverterMod;->getEvenOddSourceIndicesForCfa(I)[I
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private static isProbablyUsingAntibanding(FF)Z
