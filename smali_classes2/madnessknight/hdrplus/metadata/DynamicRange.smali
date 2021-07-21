@@ -82,7 +82,7 @@
 
     float-to-double v9, v7
 
-    const-wide/high16 v11, 0x4010000000000000L    # 4.0
+    const-wide/high16 v11, 0x4014000000000000L    # 5.0
 
     invoke-static {v9, v10, v11, v12}, Ljava/lang/Math;->pow(DD)D
 
