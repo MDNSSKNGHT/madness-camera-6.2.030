@@ -1879,6 +1879,14 @@
     invoke-direct {p0, v1, v2}, Lfeq;->a(Landroid/preference/PreferenceGroup;Landroid/preference/Preference;)Z
 
     :cond_1
+    const-string v1, "pref_category_library_gamma_curve"
+
+    invoke-direct {p0, v1}, Lfeq;->b(Ljava/lang/String;)V
+
+    const-string v1, "pref_category_library_tone_curve"
+
+    invoke-direct {p0, v1}, Lfeq;->b(Ljava/lang/String;)V
+
     const-string v1, "pref_category_library"
 
     invoke-direct {p0, v1}, Lfeq;->b(Ljava/lang/String;)V
@@ -2035,5 +2043,18 @@
     invoke-direct {p0}, Lfeq;->c()V
 
     :cond_0
+    const-string p1, "lib"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    sput-boolean p1, Lcom/google/android/apps/camera/legacy/app/settings/CameraSettingsActivity;->isRestart:Z
+
+    :cond_1
     return-void
 .end method
