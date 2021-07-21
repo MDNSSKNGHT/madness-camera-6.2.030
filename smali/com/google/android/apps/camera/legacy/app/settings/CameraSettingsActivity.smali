@@ -6,6 +6,7 @@
 # static fields
 .field private static final d:Ljava/lang/String;
 
+.field public static isRestart:Z = false
 
 # instance fields
 .field private e:Lfeq;
@@ -179,6 +180,43 @@
 
 
 # virtual methods
+.method public onBackPressed()V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/settings/CameraSettingsActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
+
+    sget-boolean v1, Lcom/google/android/apps/camera/legacy/app/settings/CameraSettingsActivity;->isRestart:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/google/android/apps/camera/legacy/app/activity/main/CameraActivity;
+
+    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const v1, 0x8000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v2, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/System;->exit(I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 5
 
