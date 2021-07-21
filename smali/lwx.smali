@@ -263,6 +263,8 @@
 
     const-string v10, "level"
 
+    const v9, 0x100
+
     invoke-virtual {v7, v10, v9}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
     :cond_1
