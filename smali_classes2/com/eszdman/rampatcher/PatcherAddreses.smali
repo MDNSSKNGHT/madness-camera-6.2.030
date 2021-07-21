@@ -8,6 +8,10 @@
 
 
 # instance fields
+.field LdrTet1Addres:J
+
+.field LdrTet2Addres:J
+
 .field blackPointAddres:J
 
 .field chromaAddres:J
@@ -20,11 +24,15 @@
 
 .field dehazeAddres:J
 
-.field expoTimeBoostAddres:J
-
 .field exportAddres:J
 
 .field exportName:Ljava/lang/String;
+
+.field exposureBoostAddres:J
+
+.field finalHDRRatio:J
+
+.field gammaAddres:[J
 
 .field isoAddres:J
 
@@ -33,6 +41,10 @@
 .field libStartAddres:J
 
 .field lumaNRAddres:J
+
+.field maxHDRRatio:J
+
+.field maxHDRRatioToo:J
 
 .field noiseModelAddres:J
 
@@ -43,6 +55,8 @@
 .field smoothing1Addres:J
 
 .field smoothing2Addres:J
+
+.field tonemapAddres:[J
 
 
 # direct methods
@@ -163,6 +177,58 @@
     add-long/2addr v0, p0
 
     return-wide v0
+.end method
+
+.method private ReadAddrArr(Ljava/lang/String;)[J
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "propertyName"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->properties:Ljava/util/Properties;
+
+    invoke-virtual {v0, p1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, ","
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    array-length v0, p1
+
+    new-array v1, v0, [J
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    aget-object v3, p1, v2
+
+    invoke-direct {p0, v3}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadLong(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    iget-wide v5, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->libStartAddres:J
+
+    add-long/2addr v3, v5
+
+    aput-wide v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method private ReadLong(Ljava/lang/String;)J
@@ -416,13 +482,69 @@
 
     iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->blackPointAddres:J
 
-    const-string p1, "expoTimeBoostAddres"
+    const-string p1, "exposureBoostAddres"
 
     invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->expoTimeBoostAddres:J
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->exposureBoostAddres:J
+
+    const-string p1, "LdrTet1Addres"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->LdrTet1Addres:J
+
+    const-string p1, "LdrTet2Addres"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->LdrTet2Addres:J
+
+    const-string p1, "finalHDRRatio"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->finalHDRRatio:J
+
+    const-string p1, "maxHDRRatio"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->maxHDRRatio:J
+
+    const-string p1, "maxHDRRatioToo"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddr(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->maxHDRRatioToo:J
+
+    const-string p1, "gammaAddres"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddrArr(Ljava/lang/String;)[J
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->gammaAddres:[J
+
+    const-string p1, "tonemapAddres"
+
+    invoke-direct {p0, p1}, Lcom/eszdman/rampatcher/PatcherAddreses;->ReadAddrArr(Ljava/lang/String;)[J
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/eszdman/rampatcher/PatcherAddreses;->tonemapAddres:[J
 
     return-void
 .end method
