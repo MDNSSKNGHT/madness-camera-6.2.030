@@ -2447,7 +2447,6 @@
         <item name="android:preferenceCategoryStyle">@style/PreferenceCategoryStyle</item>
         <item name="android:preferenceStyle">@style/PreferenceStyle</item>
         <item name="android:textColor">@color/camera_google_grey_900</item>
-        <item name="android:tint">#ff757575</item>
         <item name="android:divider">#ffdcdcdc</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:alertDialogTheme">@style/CameraListPreferenceStyle</item>
