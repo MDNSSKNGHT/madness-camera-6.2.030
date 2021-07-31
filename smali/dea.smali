@@ -1760,6 +1760,14 @@
 
     invoke-interface {v0, v1}, Llzp;->a(Ljava/lang/String;)V
 
+    const-string v3, "pref_underexposure_key"
+
+    invoke-static {v3}, Lmadnessknight/preference/PreferenceValue;->getValue(Ljava/lang/String;)I
+
+    move-result v3
+
+    if-eqz v3, :cond_18
+
     iget-object v0, v12, Ldea;->d:Ldfa;
 
     iget-object v0, v0, Ldfa;->d:Lmmb;
@@ -1772,6 +1780,10 @@
 
     invoke-static/range {v0 .. v2}, Lmadnessknight/hdrplus/metadata/DynamicRange;->ImproveDynamicRanging(Lmmb;Lmpz;Lcom/google/googlex/gcam/BurstSpec;)V
 
+    goto :goto_17
+
+    :cond_18
+    :goto_17
     invoke-virtual/range {p2 .. p2}, Lcom/google/googlex/gcam/BurstSpec;->getFrame_requests()Lcom/google/googlex/gcam/FrameRequestVector;
 
     move-result-object v3
