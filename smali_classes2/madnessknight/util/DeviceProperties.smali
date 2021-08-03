@@ -24,6 +24,36 @@
 
 
 # virtual methods
+.method public final isA3Y17()Z
+    .locals 2
+
+    sget-object v0, Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos7870()Z
+
+    move-result p0
+
+    const-string v1, "A320"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
 .method public final isExynos()Z
     .locals 1
 
@@ -35,6 +65,36 @@
 
     move-result p0
 
+    return p0
+.end method
+
+.method public final isExynos7870()Z
+    .locals 1
+
+    sget-object v0, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "8890"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
     return p0
 .end method
 
@@ -50,6 +110,36 @@
     if-eqz p0, :cond_0
 
     const-string p0, "8890"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public final isExynos8895()Z
+    .locals 1
+
+    sget-object v0, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "8895"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -84,6 +174,96 @@
     invoke-virtual {v0, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public final isExynos9820()Z
+    .locals 1
+
+    sget-object v0, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "9820"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public final isJ5Y17()Z
+    .locals 2
+
+    sget-object v0, Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos7870()Z
+
+    move-result p0
+
+    const-string v1, "J530"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public final isJ7Y17()Z
+    .locals 2
+
+    sget-object v0, Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lmadnessknight/util/DeviceProperties;->isExynos7870()Z
+
+    move-result p0
+
+    const-string v1, "J730"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     if-eqz p0, :cond_0
 
