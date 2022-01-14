@@ -23,7 +23,7 @@
 
     invoke-direct {p0, p1}, Lcvg;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lmadnessknight/util/ReflectionHelper;->getApplicationContext()Landroid/content/Context;
+    invoke-static {}, Lmadnessknight/PreferenceValue;->getPackageContext()Landroid/content/Context;
 
     move-result-object v0
 

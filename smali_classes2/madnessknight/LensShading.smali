@@ -1,4 +1,4 @@
-.class public Lmadnessknight/hdrplus/metadata/LensShading;
+.class public Lmadnessknight/LensShading;
 .super Ljava/lang/Object;
 .source "LensShading.java"
 
@@ -375,7 +375,7 @@
 
     aput-object v3, v1, v9
 
-    sput-object v1, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO70:[[[F
+    sput-object v1, Lmadnessknight/LensShading;->S21U_ISO70:[[[F
 
     new-array v1, v0, [[[F
 
@@ -707,7 +707,7 @@
 
     aput-object v3, v1, v9
 
-    sput-object v1, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO120:[[[F
+    sput-object v1, Lmadnessknight/LensShading;->S21U_ISO120:[[[F
 
     new-array v1, v0, [[[F
 
@@ -1039,7 +1039,7 @@
 
     aput-object v2, v1, v9
 
-    sput-object v1, Lmadnessknight/hdrplus/metadata/LensShading;->S21U_ISO820:[[[F
+    sput-object v1, Lmadnessknight/LensShading;->S21U_ISO820:[[[F
 
     return-void
 

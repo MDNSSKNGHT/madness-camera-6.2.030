@@ -157,7 +157,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lmadnessknight/preference/PreferenceValue;->getValueString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lmadnessknight/PreferenceValue;->getValueString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -179,7 +179,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lmadnessknight/preference/PreferenceValue;->getValueString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lmadnessknight/PreferenceValue;->getValueString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -203,7 +203,7 @@
 
     const-string v0, "OFF"
 
-    invoke-static {p0, v0}, Lmadnessknight/preference/PreferenceValue;->getValueString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lmadnessknight/PreferenceValue;->getValueString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -409,7 +409,7 @@
     :cond_9
     const-string v0, "lib_noisemodel_key"
 
-    invoke-static {v0}, Lmadnessknight/preference/PreferenceValue;->getValue(Ljava/lang/String;)I
+    invoke-static {v0}, Lmadnessknight/PreferenceValue;->getValue(Ljava/lang/String;)I
 
     move-result v0
 

@@ -151,7 +151,7 @@
 
     iput-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
     
-    sput-object p0, LMetadataConverterMod;->metadataConverter:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
+    sput-object p0, Lmadnessknight/MetadataConverterMod;->metadataConv:Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
 
     iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
@@ -417,7 +417,7 @@
 .method public static convertToGcamStaticMetadata(Lmmb;)Lcom/google/googlex/gcam/StaticMetadata;
     .locals 0
 
-    invoke-static {p0}, LMetadataConverterMod;->convertToGcamStaticMetadata(Lmmb;)Lcom/google/googlex/gcam/StaticMetadata;
+    invoke-static {p0}, Lmadnessknight/MetadataConverterMod;->convertToGcamStaticMetadata(Lmmb;)Lcom/google/googlex/gcam/StaticMetadata;
 
     move-result-object p0
 
@@ -2471,7 +2471,7 @@
 .method public convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
     .locals 0
 
-    invoke-static {p1, p2, p3}, LMetadataConverterMod;->convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+    invoke-static {p1, p2, p3}, Lmadnessknight/MetadataConverterMod;->convertToGcamFrameMetadata(Lmpz;[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
 
     move-result-object p1
 
@@ -2481,7 +2481,7 @@
 .method public convertToSpatialGainMap(Lmpz;)Lcom/google/googlex/gcam/SpatialGainMap;
     .locals 0
 
-    invoke-static {p1}, LMetadataConverterMod;->convertToSpatialGainMap(Lmpz;)Lcom/google/googlex/gcam/SpatialGainMap;
+    invoke-static {p1}, Lmadnessknight/MetadataConverterMod;->convertToSpatialGainMap(Lmpz;)Lcom/google/googlex/gcam/SpatialGainMap;
 
     move-result-object p1
 

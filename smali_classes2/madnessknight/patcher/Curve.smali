@@ -533,7 +533,7 @@
 
     const-string v0, "lib_gamma_x1"
 
-    invoke-static {v0}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v0}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v0
 
@@ -543,7 +543,7 @@
 
     const-string v2, "lib_gamma_x2"
 
-    invoke-static {v2}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v2}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v2
 
@@ -551,7 +551,7 @@
 
     const-string v1, "lib_gamma_y1_key"
 
-    invoke-static {v1}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v1}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v1
 
@@ -561,7 +561,7 @@
 
     const-string v4, "lib_gamma_y2_key"
 
-    invoke-static {v4}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v4}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v4
 
@@ -821,7 +821,7 @@
 
     const-string v0, "lib_pdarks_key"
 
-    invoke-static {v0}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v0}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v0
 
@@ -831,7 +831,7 @@
 
     const-string v2, "lib_pwhites_key"
 
-    invoke-static {v2}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v2}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v2
 
@@ -839,7 +839,7 @@
 
     const-string v1, "lib_darks_key"
 
-    invoke-static {v1}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v1}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v1
 
@@ -849,7 +849,7 @@
 
     const-string v4, "lib_whites_key"
 
-    invoke-static {v4}, Lmadnessknight/preference/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
+    invoke-static {v4}, Lmadnessknight/PreferenceValue;->getValueFloat(Ljava/lang/String;)F
 
     move-result v4
 
