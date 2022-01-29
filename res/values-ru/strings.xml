@@ -498,5 +498,4 @@
     <string name="quality_ns_title">Качество Ночной съемки</string>
     <string name="pref_maxbright_title">Макс. яркость экрана</string>
     <string name="pref_denoise_title">Усилить шумодав</string>
-    <string name="sat_title">Насыщенность :</string>
 </resources>

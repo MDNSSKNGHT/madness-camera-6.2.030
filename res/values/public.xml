@@ -4889,7 +4889,6 @@
     <public type="string" name="pref_darkmode_title" id="0x7f13037c" />
     <public type="string" name="pref_maxbright_title" id="0x7f13037d" />
     <public type="string" name="pref_denoise_title" id="0x7f13037e" />
-    <public type="string" name="sat_title" id="0x7f13037f" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f140000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f140001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f140002" />
