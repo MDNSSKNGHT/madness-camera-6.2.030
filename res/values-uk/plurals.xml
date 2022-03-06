@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Серійна зйомка (%1$d фото)</item>
+        <item quantity="one">Серійна зйомка (%1$d фото)</item>
+        <item quantity="few">Серійна зйомка (%1$d фото)</item>
+        <item quantity="many">Серійна зйомка (%1$d фото)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d обличчя.</item>
+        <item quantity="one">%1$d обличчя.</item>
+        <item quantity="few">%1$d обличчя.</item>
+        <item quantity="many">%1$d облич.</item>
+    </plurals>
+</resources>

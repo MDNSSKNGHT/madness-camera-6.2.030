@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#bc000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/imageBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.GoogleMaterial.Headline5" android:textColor="#ffffffff" android:id="@id/textTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="Feature Name" android:layout_marginStart="36.0dip" />
+        <TextView android:textAppearance="@style/TextAppearance.GoogleMaterial.Body1" android:textColor="#ffffffff" android:id="@id/textContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Information about feature goes here.\nUse multiple lines, etc.\nAnother line." android:layout_marginStart="36.0dip" android:layout_marginEnd="36.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.design.button.MaterialButton android:theme="@style/Theme.GoogleMaterial.Light.Dialog" android:id="@id/textGotIt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:layout_marginTop="24.0dip" android:text="@string/infopane_got_it" style="@style/Widget.GoogleMaterial.Button"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <android.support.design.button.MaterialButton android:theme="@style/Theme.GoogleMaterial.Light.Dialog" android:textColor="@color/google_blue500" android:id="@id/btnLearnMore" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="24.0dip" android:text="@string/infopane_learn_more" style="@style/Widget.GoogleMaterial.TextButton"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

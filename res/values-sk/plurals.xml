@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Séria (%1$d fotiek)</item>
+        <item quantity="one">Séria (%1$d fotka)</item>
+        <item quantity="few">Séria (%1$d fotky)</item>
+        <item quantity="many">Séria (%1$d fotky)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d tvárí.</item>
+        <item quantity="one">%1$d tvár.</item>
+        <item quantity="few">%1$d tváre.</item>
+        <item quantity="many">%1$d tváre.</item>
+    </plurals>
+</resources>

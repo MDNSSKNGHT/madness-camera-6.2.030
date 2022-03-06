@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Катары менен тартылган сүрөттөр (%1$d сүрөт)</item>
+        <item quantity="one">Катары менен тартылган сүрөттөр (%1$d сүрөт)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d жүз.</item>
+        <item quantity="one">%1$d жүз.</item>
+    </plurals>
+</resources>

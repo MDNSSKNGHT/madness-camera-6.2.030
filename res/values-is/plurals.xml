@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Myndaröð (%1$d myndir)</item>
+        <item quantity="one">Myndaröð (%1$d mynd)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d andlit.</item>
+        <item quantity="one">%1$d andlit.</item>
+    </plurals>
+</resources>

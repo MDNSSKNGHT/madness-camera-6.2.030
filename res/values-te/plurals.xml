@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">బరస్ట్ (%1$d ఫోటోలు)</item>
+        <item quantity="one">బరస్ట్ (%1$d ఫోటో)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d ముఖాలు.</item>
+        <item quantity="one">%1$d ముఖం.</item>
+    </plurals>
+</resources>

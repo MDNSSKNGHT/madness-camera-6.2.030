@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="android_wear_capabilities">
+        <item>snapshot_from_wear</item>
+    </string-array>
+    <string-array name="camcorder_profile_names">
+        <item>@string/pref_video_quality_entry_low</item>
+        <item>@string/pref_video_quality_entry_high</item>
+        <item>@string/pref_video_quality_entry_qcif_notrans</item>
+        <item>@string/pref_video_quality_entry_cif_notrans</item>
+        <item>@string/pref_video_quality_entry_480p_notrans</item>
+        <item>@string/pref_video_quality_entry_720p_notrans</item>
+        <item>@string/pref_video_quality_entry_1080p_notrans</item>
+        <item>@string/pref_video_quality_entry_qvga_notrans</item>
+        <item>@string/pref_video_quality_entry_2160p_notrans</item>
+    </string-array>
+    <string-array name="camera_id_entryvalues">
+        <item>@string/pref_camera_id_entry_back_value</item>
+        <item>@string/pref_camera_id_entry_front_value</item>
+    </string-array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </string-array>
+    <item type="array" name="APKTOOL_DUMMY_6">false</item>
+    <item type="array" name="APKTOOL_DUMMY_7">false</item>
+    <array name="material_google_colors">
+        <item>@color/quantum_googblue</item>
+        <item>@color/quantum_googred</item>
+        <item>@color/quantum_googyellow</item>
+        <item>@color/quantum_googgreen</item>
+    </array>
+    <item type="array" name="APKTOOL_DUMMY_9">false</item>
+    <string-array name="pref_camera_focusmode_default_array">
+        <item>continuous-picture</item>
+        <item>auto</item>
+    </string-array>
+    <string-array name="pref_camera_focusmode_entryvalues">
+        <item>auto</item>
+        <item>infinity</item>
+        <item>macro</item>
+    </string-array>
+    <string-array name="pref_camera_hdr_supportmode_entryvalues">
+        <item>@string/pref_camera_hdr_supportmode_none</item>
+        <item>@string/pref_camera_hdr_supportmode_hdr</item>
+        <item>@string/pref_camera_hdr_supportmode_hdr_plus</item>
+    </string-array>
+    <string-array name="pref_camera_hdrplus_entryvalues">
+        <item>off</item>
+        <item>on</item>
+        <item>auto</item>
+    </string-array>
+    <string-array name="pref_camera_jpeg_quality_entryvalues">
+        <item>@string/pref_camera_jpeg_quality_normal</item>
+        <item>@string/pref_camera_jpeg_quality_fine</item>
+        <item>@string/pref_camera_jpeg_quality_superfine</item>
+    </string-array>
+    <string-array name="pref_camera_pano_orientation_entryvalues">
+        <item>@string/pano_orientation_horizontal</item>
+        <item>@string/pano_orientation_vertical</item>
+        <item>@string/pano_orientation_wide</item>
+        <item>@string/pano_orientation_fisheye</item>
+    </string-array>
+    <string-array name="pref_camera_picturesize_entryvalues">
+        <item>@string/pref_camera_picturesize_default</item>
+        <item>medium</item>
+        <item>small</item>
+    </string-array>
+    <string-array name="pref_camera_scenemode_entryvalues">
+        <item>auto</item>
+        <item>hdr</item>
+    </string-array>
+    <string-array name="pref_camera_video_flashmode_entryvalues">
+        <item>@string/pref_camera_video_flashmode_torch</item>
+        <item>@string/pref_camera_video_flashmode_off</item>
+    </string-array>
+    <integer-array name="pref_countdown_duration">
+        <item>0</item>
+        <item>3</item>
+        <item>10</item>
+    </integer-array>
+    <string-array name="pref_double_tap_action_entries">
+        <item>@string/double_tap_zoom</item>
+        <item>@string/double_tap_switch_camera</item>
+        <item>@string/setting_off</item>
+    </string-array>
+    <string-array name="pref_double_tap_entryvalues">
+        <item>@string/preference_double_tap_zoom</item>
+        <item>@string/preference_double_tap_switch_camera</item>
+        <item>@string/preference_double_tap_none</item>
+    </string-array>
+    <string-array name="pref_grid_mode_entries">
+        <item>@string/grid_mode_off</item>
+        <item>@string/grid_mode_three_by_three</item>
+        <item>@string/grid_mode_four_by_four</item>
+        <item>@string/grid_mode_golden_ratio</item>
+    </string-array>
+    <string-array name="pref_grid_mode_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <item type="array" name="APKTOOL_DUMMY_18">false</item>
+    <item type="array" name="APKTOOL_DUMMY_19">false</item>
+    <item type="array" name="APKTOOL_DUMMY_1a">false</item>
+    <item type="array" name="APKTOOL_DUMMY_1b">false</item>
+    <string-array name="pref_video_effect_entryvalues">
+        <item>@string/pref_video_effect_default</item>
+        <item>goofy_face/squeeze</item>
+        <item>goofy_face/big_eyes</item>
+        <item>goofy_face/big_mouth</item>
+        <item>goofy_face/small_mouth</item>
+        <item>goofy_face/big_nose</item>
+        <item>goofy_face/small_eyes</item>
+        <item>backdropper/file:///system/media/video/AndroidInSpace.480p.mp4</item>
+        <item>backdropper/file:///system/media/video/Sunset.480p.mp4</item>
+        <item>backdropper/gallery</item>
+    </string-array>
+    <item type="array" name="APKTOOL_DUMMY_1d">false</item>
+    <item type="array" name="APKTOOL_DUMMY_1e">false</item>
+    <string-array name="pref_video_quality_entryvalues">
+        <item>@string/pref_video_quality_large</item>
+        <item>@string/pref_video_quality_medium</item>
+        <item>@string/pref_video_quality_small</item>
+    </string-array>
+    <string-array name="pref_volume_action_entries">
+        <item>@string/volume_key_shutter</item>
+        <item>@string/volume_key_zoom</item>
+        <item>@string/volume_key_volume</item>
+        <item>@string/volume_key_off</item>
+    </string-array>
+    <string-array name="pref_volume_action_entryvalues">
+        <item>@string/preference_volume_key_shutter</item>
+        <item>@string/preference_volume_key_zoom</item>
+        <item>@string/preference_volume_key_volume</item>
+        <item>@string/preference_volume_key_off</item>
+    </string-array>
+    <item type="array" name="APKTOOL_DUMMY_22">false</item>
+    <item type="array" name="APKTOOL_DUMMY_23">false</item>
+    <item type="array" name="APKTOOL_DUMMY_24">false</item>
+    <string-array name="toybox_hfr_mode_descriptions">
+        <item>@string/hfr_mode_120fps</item>
+        <item>@string/hfr_mode_240fps</item>
+    </string-array>
+    <string-array name="toybox_hfr_mode_rates">
+        <item>@string/hfr_fps_120</item>
+        <item>@string/hfr_fps_240</item>
+    </string-array>
+    <string-array name="trusted_certificates">
+        <item>4BA713DFECE93D47572DC5E845A7A82C4A891F2F</item>
+        <item>24BB24C05E47E0AEFA68A58A766179D9B613A600</item>
+    </string-array>
+    <string-array name="pref_qjpg_entries">
+        <item>@string/pref_qjpg_0</item>
+        <item>@string/pref_qjpg_50</item>
+        <item>@string/pref_qjpg_70</item>
+        <item>@string/pref_qjpg_80</item>
+        <item>@string/pref_qjpg_90</item>
+        <item>@string/pref_qjpg_95</item>
+        <item>@string/pref_qjpg_96</item>
+        <item>@string/pref_qjpg_97</item>
+        <item>@string/pref_qjpg_98</item>
+        <item>@string/pref_qjpg_99</item>
+        <item>@string/pref_qjpg_100</item>
+        <item>@string/pref_qjpg_yuv</item>
+    </string-array>
+    <string-array name="pref_qjpg_entryvalues">
+        <item>0</item>
+        <item>50</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+        <item>101</item>
+    </string-array>
+    <string-array name="quality_entries">
+        <item>@string/quality_0</item>
+        <item>@string/quality_p1</item>
+        <item>@string/quality_p2</item>
+        <item>@string/quality_p3</item>
+        <item>@string/quality_p4</item>
+        <item>@string/quality_p5</item>
+    </string-array>
+    <string-array name="quality_entryvalues">
+        <item>0</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+    </string-array>
+    <string-array name="quality_ns_entries">
+        <item>@string/quality_0</item>
+        <item>@string/quality_p1</item>
+        <item>@string/quality_p2</item>
+    </string-array>
+    <string-array name="quality_ns_entryvalues">
+        <item>0</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="sat_entries">
+        <item>@string/sat_5</item>
+        <item>@string/sat_6</item>
+        <item>@string/sat_7</item>
+        <item>@string/sat_8</item>
+        <item>@string/sat_9</item>
+        <item>@string/sat_10</item>
+        <item>@string/sat_11</item>
+        <item>@string/sat_12</item>
+        <item>@string/sat_13</item>
+        <item>@string/sat_14</item>
+        <item>@string/sat_15</item>
+    </string-array>
+    <string-array name="sat_entryvalues">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="awb_entries">
+        <item>@string/awb_s</item>
+        <item>@string/awb_g</item>
+    </string-array>
+    <string-array name="awb_entryvalues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

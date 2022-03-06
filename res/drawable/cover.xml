@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/camera_black_background" />
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/quantum_gm_ic_camera_alt_white_48" />
+    </item>
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">বার্স্ট (%1$dটি ফটো)</item>
+        <item quantity="one">বার্স্ট (%1$dটি ফটো)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$dটি মুখ৷</item>
+        <item quantity="one">%1$dটি মুখ৷</item>
+    </plurals>
+</resources>

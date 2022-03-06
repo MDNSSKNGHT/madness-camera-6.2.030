@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Smart Burst ရိုက်ကူးထားသောဓာတ်ပုံ (%1$d ပုံ)</item>
+        <item quantity="one">Smart Burst ရိုက်ကူးထားသောဓာတ်ပုံ (%1$d ပုံ)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">မျက်နှာ %1$d ခု။</item>
+        <item quantity="one">မျက်နှာ %1$d ခု။</item>
+    </plurals>
+</resources>

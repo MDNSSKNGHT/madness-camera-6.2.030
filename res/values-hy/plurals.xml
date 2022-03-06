@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Շարք (%1$d լուսանկար)</item>
+        <item quantity="one">Շարք (%1$d լուսանկար)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d դեմք:</item>
+        <item quantity="one">%1$d faces.</item>
+    </plurals>
+</resources>

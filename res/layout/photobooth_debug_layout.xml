@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/debug_switch_root" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Switch android:id="@id/debug_switch" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:thumbTint="@color/quantum_googblue500" android:trackTint="@color/switch_color" />
+        <TextView android:textColor="@android:color/white" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Debug Capture" android:layout_weight="1.0" />
+        <Button android:textColor="@color/quantum_googblue500" android:layout_gravity="end" android:id="@id/upload_button" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upload in Overlay" android:layout_marginEnd="8.0dip" style="@style/Widget.AppCompat.Button.Borderless" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/debug_recording_root" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/debug_record_icon" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="3.0dip" android:foreground="@drawable/ic_record" />
+        <TextView android:textColor="@android:color/white" android:id="@id/debug_record_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:layout_marginStart="4.0dip" />
+    </LinearLayout>
+</LinearLayout>

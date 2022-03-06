@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:height="24.0dip" android:width="24.0dip" android:drawable="@drawable/ic_raw_on_gm2_24px" />
+    <item android:drawable="@drawable/ic_circles_translucent" />
+</layer-list>

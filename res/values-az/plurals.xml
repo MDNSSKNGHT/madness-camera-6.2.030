@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Silsilə (%1$d Foto)</item>
+        <item quantity="one">Silsilə (%1$d Foto)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d üz.</item>
+        <item quantity="one">%1$d üz.</item>
+    </plurals>
+</resources>

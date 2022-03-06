@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Rafală (%1$d de fotografii)</item>
+        <item quantity="one">Rafală (%1$d fotografie)</item>
+        <item quantity="few">Rafală (%1$d fotografii)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d de fețe.</item>
+        <item quantity="one">%1$d față.</item>
+        <item quantity="few">%1$d fețe.</item>
+    </plurals>
+</resources>

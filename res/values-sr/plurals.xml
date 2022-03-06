@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Рафално снимање (%1$d слика)</item>
+        <item quantity="one">Рафално снимање (%1$d слика)</item>
+        <item quantity="few">Рафално снимање (%1$d слике)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d лица.</item>
+        <item quantity="one">%1$d лице.</item>
+        <item quantity="few">%1$d лица.</item>
+    </plurals>
+</resources>

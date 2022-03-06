@@ -1,0 +1,1 @@
+libGoogleCameraRelease_xxhdpi.so

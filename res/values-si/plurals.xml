@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">අඛණ්ඩ අධිවේගී (ඡායාරූප %1$d)</item>
+        <item quantity="one">අඛණ්ඩ අධිවේගී (ඡායාරූප %1$d)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">මුහුණු %1$d.</item>
+        <item quantity="one">මුහුණු %1$d.</item>
+    </plurals>
+</resources>
