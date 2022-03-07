@@ -3620,7 +3620,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_214
+    if-eqz v1, :cond_21d
 
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
@@ -3632,11 +3632,11 @@
 
     new-array p2, p2, [F
 
-    fill-array-data p2, :array_3c0
+    fill-array-data p2, :array_3c8
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto/16 :goto_243
+    goto/16 :goto_24c
 
     :cond_1b3
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
@@ -3659,11 +3659,11 @@
 
     new-array p2, p2, [F
 
-    fill-array-data p2, :array_3cc
+    fill-array-data p2, :array_3d4
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto/16 :goto_243
+    goto/16 :goto_24c
 
     :cond_1cf
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
@@ -3672,24 +3672,24 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1e0
+    if-eqz v1, :cond_1e1
 
     new-array p2, p2, [F
 
-    fill-array-data p2, :array_3d8
+    fill-array-data p2, :array_3e0
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto :goto_243
+    goto/16 :goto_24c
 
-    :cond_1e0
+    :cond_1e1
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
     invoke-virtual {v1}, Lmpj;->isExynos9810()Z
 
     move-result v1
 
-    if-nez v1, :cond_20b
+    if-nez v1, :cond_214
 
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
@@ -3697,47 +3697,55 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1f1
+    if-nez v1, :cond_214
 
-    goto :goto_20b
+    iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
-    :cond_1f1
+    invoke-virtual {v1}, Lmpj;->isExynos9825()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1fa
+
+    goto :goto_214
+
+    :cond_1fa
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->deviceProperties:Lmpj;
 
     invoke-virtual {v1}, Lmpj;->isExynos2100()Z
 
     move-result v1
 
-    if-eqz v1, :cond_202
+    if-eqz v1, :cond_20b
 
     new-array p2, p2, [F
 
-    fill-array-data p2, :array_3e4
+    fill-array-data p2, :array_3ec
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto :goto_243
-
-    :cond_202
-    new-array p2, p2, [F
-
-    fill-array-data p2, :array_3f0
-
-    invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
-
-    goto :goto_243
+    goto :goto_24c
 
     :cond_20b
-    :goto_20b
     new-array p2, p2, [F
 
-    fill-array-data p2, :array_3fc
+    fill-array-data p2, :array_3f8
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto :goto_243
+    goto :goto_24c
 
     :cond_214
+    :goto_214
+    new-array p2, p2, [F
+
+    fill-array-data p2, :array_404
+
+    invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
+
+    goto :goto_24c
+
+    :cond_21d
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SENSOR_DYNAMIC_BLACK_LEVEL:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v1}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3746,13 +3754,13 @@
 
     check-cast v1, [F
 
-    if-eqz v1, :cond_222
+    if-eqz v1, :cond_22b
 
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    goto :goto_243
+    goto :goto_24c
 
-    :cond_222
+    :cond_22b
     iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->characteristics:Lmmb;
 
     sget-object v4, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -3763,12 +3771,12 @@
 
     check-cast v1, Landroid/hardware/camera2/params/BlackLevelPattern;
 
-    if-eqz v1, :cond_243
+    if-eqz v1, :cond_24c
 
     new-array v4, p2, [F
 
-    :goto_230
-    if-ge v3, p2, :cond_240
+    :goto_239
+    if-ge v3, p2, :cond_249
 
     rem-int/lit8 v6, v3, 0x2
 
@@ -3784,13 +3792,13 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_230
+    goto :goto_239
 
-    :cond_240
+    :cond_249
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
-    :cond_243
-    :goto_243
+    :cond_24c
+    :goto_24c
     sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, p2}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3817,14 +3825,14 @@
 
     move-result v1
 
-    if-eq v1, v2, :cond_261
+    if-eq v1, v2, :cond_26a
 
-    if-ne v1, v5, :cond_264
+    if-ne v1, v5, :cond_26d
 
-    :cond_261
+    :cond_26a
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setFocus_distance_diopters(F)V
 
-    :cond_264
+    :cond_26d
     sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, p2}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3833,7 +3841,7 @@
 
     check-cast p2, Ljava/lang/Float;
 
-    if-eqz p2, :cond_275
+    if-eqz p2, :cond_27e
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -3841,7 +3849,7 @@
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setFocal_length_mm(F)V
 
-    :cond_275
+    :cond_27e
     sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, p2}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3850,7 +3858,7 @@
 
     check-cast p2, Ljava/lang/Float;
 
-    if-eqz p2, :cond_286
+    if-eqz p2, :cond_28f
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -3858,7 +3866,7 @@
 
     invoke-virtual {v0, p2}, Lcom/google/googlex/gcam/FrameMetadata;->setF_number(F)V
 
-    :cond_286
+    :cond_28f
     sget-object p2, Landroid/hardware/camera2/CaptureResult;->CONTROL_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, p2}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3927,7 +3935,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    if-eqz v1, :cond_2d8
+    if-eqz v1, :cond_2e1
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -3935,7 +3943,7 @@
 
     invoke-virtual {p2, v1}, Lcom/google/googlex/gcam/AeMetadata;->setPrecapture_trigger(I)V
 
-    :cond_2d8
+    :cond_2e1
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v1}, Lmpz;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -4104,7 +4112,7 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    if-eqz p0, :cond_397
+    if-eqz p0, :cond_3a0
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -4112,7 +4120,7 @@
 
     invoke-virtual {v0, p0}, Lcom/google/googlex/gcam/FrameMetadata;->setLens_state(I)V
 
-    :cond_397
+    :cond_3a0
     invoke-static {p1}, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->getOisMetadata(Lmpz;)Ljava/util/Optional;
 
     move-result-object p0
@@ -4127,7 +4135,7 @@
 
     sget-object p0, Lkvf;->n:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz p0, :cond_3b9
+    if-eqz p0, :cond_3c2
 
     sget-object p0, Lkvf;->n:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -4143,17 +4151,15 @@
 
     invoke-virtual {v0, p0}, Lcom/google/googlex/gcam/FrameMetadata;->setExposure_time_boost(F)V
 
-    :cond_3b9
-    if-eqz p3, :cond_3be
+    :cond_3c2
+    if-eqz p3, :cond_3c7
 
     invoke-virtual {v0, p3}, Lcom/google/googlex/gcam/FrameMetadata;->setGyro_samples(Lcom/google/googlex/gcam/GyroSampleVector;)V
 
-    :cond_3be
+    :cond_3c7
     return-object v0
 
-    nop
-
-    :array_3c0
+    :array_3c8
     .array-data 4
         0x42800000    # 64.0f
         0x42800000    # 64.0f
@@ -4161,7 +4167,7 @@
         0x42800000    # 64.0f
     .end array-data
 
-    :array_3cc
+    :array_3d4
     .array-data 4
         0x0
         0x0
@@ -4169,7 +4175,7 @@
         0x0
     .end array-data
 
-    :array_3d8
+    :array_3e0
     .array-data 4
         0x0
         0x0
@@ -4177,7 +4183,7 @@
         0x0
     .end array-data
 
-    :array_3e4
+    :array_3ec
     .array-data 4
         0x0
         0x0
@@ -4185,7 +4191,7 @@
         0x0
     .end array-data
 
-    :array_3f0
+    :array_3f8
     .array-data 4
         0x42800000    # 64.0f
         0x42800000    # 64.0f
@@ -4193,7 +4199,7 @@
         0x42800000    # 64.0f
     .end array-data
 
-    :array_3fc
+    :array_404
     .array-data 4
         0x0
         0x0
