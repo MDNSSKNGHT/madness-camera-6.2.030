@@ -649,6 +649,31 @@
     invoke-virtual {v2, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
 
     :cond_f5
+    invoke-static {}, Lmpj;->a()Lmpj;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lmpj;->isJ5Y17()Z
+
+    move-result v1
+
+    if-nez v1, :cond_120
+
+    invoke-virtual {v0}, Lmpj;->isJ7Y17()Z
+
+    move-result v1
+
+    if-nez v1, :cond_120
+
+    invoke-virtual {v0}, Lmpj;->isA3Y17()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10c
+
+    goto :goto_120
+
+    :cond_10c
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v0}, Lmmb;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -667,6 +692,13 @@
 
     invoke-virtual {v2, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
 
+    goto :goto_123
+
+    :cond_120
+    :goto_120
+    invoke-virtual {v2, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    :goto_123
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -739,7 +771,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    if-eqz v1, :cond_181
+    if-eqz v1, :cond_19c
 
     sget-object v3, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -781,7 +813,7 @@
 
     invoke-virtual {v0, v5}, Lcom/google/googlex/gcam/DngColorCalibrationVector;->add(Lcom/google/googlex/gcam/DngColorCalibration;)V
 
-    :cond_181
+    :cond_19c
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v1}, Lmmb;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -790,7 +822,7 @@
 
     check-cast v1, Ljava/lang/Byte;
 
-    if-eqz v1, :cond_1b8
+    if-eqz v1, :cond_1d3
 
     sget-object v3, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -832,7 +864,7 @@
 
     invoke-virtual {v0, v5}, Lcom/google/googlex/gcam/DngColorCalibrationVector;->add(Lcom/google/googlex/gcam/DngColorCalibration;)V
 
-    :cond_1b8
+    :cond_1d3
     invoke-virtual {v2, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDng_color_calibration(Lcom/google/googlex/gcam/DngColorCalibrationVector;)V
 
     invoke-static {}, Lcom/google/googlex/gcam/hdrplus/MetadataConverter;->getQcColorCalibration()Lcom/google/googlex/gcam/QcColorCalibration;
