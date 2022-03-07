@@ -10,6 +10,8 @@
 
 .field private final board:Ljava/lang/String;
 
+.field private final bootloader:Ljava/lang/String;
+
 .field public final c:Z
 
 .field public final d:Z
@@ -305,6 +307,10 @@
 
     iput-object p1, p0, Lmpj;->hardware:Ljava/lang/String;
 
+    sget-object p1, Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;
+
+    iput-object p1, p0, Lmpj;->bootloader:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -563,6 +569,20 @@
     return v0
 .end method
 
+.method public final isA3Y17()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->bootloader:Ljava/lang/String;
+
+    const-string v0, "A320"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public final isExynos()Z
     .locals 1
 
@@ -669,6 +689,34 @@
     const-string v0, "9825"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isJ5Y17()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->bootloader:Ljava/lang/String;
+
+    const-string v0, "J530"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isJ7Y17()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->bootloader:Ljava/lang/String;
+
+    const-string v0, "J730"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
