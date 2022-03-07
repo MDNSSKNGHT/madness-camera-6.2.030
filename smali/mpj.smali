@@ -8,6 +8,8 @@
 
 .field public final b:Z
 
+.field private final board:Ljava/lang/String;
+
 .field public final c:Z
 
 .field public final d:Z
@@ -19,6 +21,8 @@
 .field public final g:Z
 
 .field private final h:Z
+
+.field private final hardware:Ljava/lang/String;
 
 .field private final i:Z
 
@@ -293,6 +297,14 @@
     :goto_d
     iput-boolean v0, p0, Lmpj;->g:Z
 
+    sget-object p1, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    iput-object p1, p0, Lmpj;->board:Ljava/lang/String;
+
+    sget-object p1, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
+
+    iput-object p1, p0, Lmpj;->hardware:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -549,4 +561,102 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public final isExynos()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->hardware:Ljava/lang/String;
+
+    const-string v0, "exynos"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos2100()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "2100"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos7870()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "7870"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos8890()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "8890"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos8895()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "8890"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos9810()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "9810"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final isExynos9820()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "9820"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
 .end method
