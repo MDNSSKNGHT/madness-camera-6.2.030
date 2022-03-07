@@ -15,6 +15,8 @@
 
 .field private final d:Lkms;
 
+.field private gotAF:I
+
 
 # direct methods
 .method public constructor <init>(Lawn;Lawq;Laxa;Laxf;Lays;Lkmu;Lkms;Llpx;Ljava/util/Set;Lkne;Lawp;Lmmb;Llrm;Llrm;Z)V
@@ -44,25 +46,19 @@
 
     const/4 v6, 0x1
 
-    if-nez v5, :cond_1
+    if-nez v5, :cond_0
 
     invoke-interface/range {p12 .. p12}, Lmmb;->p()Z
 
     move-result v5
 
-    if-nez v5, :cond_0
-
-    const/4 v6, 0x0
-
-    goto :goto_0
+    if-eqz v5, :cond_4
 
     :cond_0
-    nop
+    const/4 v6, 0x1
 
-    :cond_1
-    nop
+    iput v6, v0, Lbat;->gotAF:I
 
-    :goto_0
     invoke-static {v6}, Lohr;->a(Z)V
 
     iput-object v1, v0, Lbat;->b:Lawq;
@@ -184,6 +180,13 @@
     invoke-virtual {v1, v2}, Llpu;->a(Llyu;)Llyu;
 
     return-void
+
+    :cond_4
+    const/4 v6, 0x0
+
+    iput v6, v0, Lbat;->gotAF:I
+
+    return-void
 .end method
 
 .method public constructor <init>(Lawn;Lawq;Laxa;Laxf;Lays;Lkmu;Lkms;Llpx;Ljava/util/Set;Lkne;Lawp;Lmmb;Llrm;Llrm;ZB)V
@@ -201,9 +204,15 @@
 .method public final close()V
     .locals 2
 
+    return-void
+
     iget-object v0, p0, Lbat;->a:Llpu;
 
     invoke-virtual {v0}, Llpu;->close()V
+
+    iget v0, p0, Lbat;->gotAF:I
+
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lbat;->b:Lawq;
 
@@ -219,5 +228,6 @@
 
     invoke-virtual {v0}, Lkms;->c()V
 
+    :cond_0
     return-void
 .end method
