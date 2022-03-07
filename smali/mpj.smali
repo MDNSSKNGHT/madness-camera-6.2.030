@@ -660,3 +660,17 @@
 
     return p0
 .end method
+
+.method public final isExynos9825()Z
+    .locals 1
+
+    iget-object p0, p0, Lmpj;->board:Ljava/lang/String;
+
+    const-string v0, "9825"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
