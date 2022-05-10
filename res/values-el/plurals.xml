@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Ριπή (%1$d φωτογραφίες)</item>
+        <item quantity="one">Ριπή (%1$d φωτογραφία)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d πρόσωπα.</item>
+        <item quantity="one">%1$d πρόσωπο.</item>
+    </plurals>
+</resources>

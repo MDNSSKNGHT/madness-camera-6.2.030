@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/gleam_animated_vector_1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/gleam_animated_vector_2" />
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/gleam_animated_vector_3" />
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/gleam_animated_vector_4" />
+    <target android:name="_R_G_L_0_G_D_0_P_0" android:animation="@drawable/gleam_animated_vector_5" />
+    <target android:name="_R_G_L_0_G_D_0_P_0" android:animation="@drawable/gleam_animated_vector_6" />
+    <target android:name="_R_G_L_0_G_D_1_P_0" android:animation="@drawable/gleam_animated_vector_7" />
+    <target android:name="_R_G_L_0_G_D_1_P_0" android:animation="@drawable/gleam_animated_vector_8" />
+    <target android:name="time_group" android:animation="@drawable/gleam_animated_vector_9" />
+</animated-vector>

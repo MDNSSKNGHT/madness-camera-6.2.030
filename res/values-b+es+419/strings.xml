@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_content_description">Ícono de diálogo</string>
+    <string name="password_toggle_content_description">Mostrar contraseña</string>
+    <string name="time_difference_now">Ahora</string>
+    <string name="time_difference_short_days_and_hours">%1$s %2$s﻿</string>
+    <string name="time_difference_short_hours_and_minutes">%1$s %2$s﻿</string>
+</resources>

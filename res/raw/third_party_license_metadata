@@ -1,0 +1,166 @@
+11:11359 Abseil
+11410:10695 Android Annotations Support Library
+22141:11362 Android Architecture Components
+33552:11362 Android Architecture Components Core Library
+44968:11362 Android Architecture Components Lifecycle Library
+56392:11362 Android Architecture Components Lifecycle Runtime Library
+67789:10695 Android Compat Support Library
+78521:10695 Android Compatibility Library v4
+89253:10695 Android Compatibility Library v7
+99994:10694 Android Constraint Layout Support Library
+110724:10695 Android Core UI Support Library
+121458:10691 Android Core Utils Support Library
+132189:10695 Android Custom Tabs Support Library
+142919:10695 Android Design Support Library
+153660:10695 Android Dynamic Animation Support Library
+164393:10695 Android Fragments Support Library
+175125:10695 Android Graphics Support Library
+185861:10691 Android Media Compat Support Library
+196588:10695 Android Percent Support Library
+207322:10691 Android Transition Support Library
+218046:10695 AndroidX annotation library.
+228773:10695 AndroidX card view library.
+239504:10695 AndroidX document file library.
+250227:10695 AndroidX print library.
+260965:10695 AndroidX versioned parcelable library.
+271685:11358 Apache Commons Codec
+283104:10693 Compatibility Libraries for Android asynclayoutinflater.
+293850:10693 Compatibility Libraries for Android collections.
+304602:10693 Compatibility Libraries for Android coordinatorlayout.
+315350:10693 Compatibility Libraries for Android cursoradapter.
+326095:10693 Compatibility Libraries for Android customview.
+336842:10693 Compatibility Libraries for Android documentfile.
+347589:10693 Compatibility Libraries for Android drawerlayout.
+358336:10693 Compatibility Libraries for Android interpolator.
+369077:10693 Compatibility Libraries for Android loader.
+379833:10693 Compatibility Libraries for Android localbroadcastmanager.
+390573:10693 Compatibility Libraries for Android print.
+401325:10693 Compatibility Libraries for Android slidingpanelayout.
+412078:10695 Compatibility Libraries for Android support-slices_core
+422833:10693 Compatibility Libraries for Android swiperefreshlayout.
+433577:10693 Compatibility Libraries for Android viewpager.
+444288:11358 Crunchy Crypt
+455657:11358 Dagger
+467026:11358 Dimsum
+478396:11410 Drishti
+489819:11340 Edge TPU
+501175:11357 Error Prone
+512555:11358 FasterXML Jackson2
+523929:11342 FlatBuffers
+535278:24974 GL
+560268:11358 Google Auto
+571654:11356 Google HTTP Java Client
+583025:11358 Guava JDK5
+594398:11362 Guava JDK7
+605776:11359 HighwayHash
+617193:11357 Intel(R) Math Kernel Library for Deep Neural Networks
+628561:11358 J2ObjC
+639931:11358 JSR 250
+651301:11365 JSR 330
+662680:11358 Joda-Time
+674074:11358 Material Components for Android
+685443:11358 OkHttp
+696810:11358 Okio
+708183:11358 OpenCensus
+719573:11357 PCG Random Number Generator
+730946:11358 SwiftShader
+742319:11416 TensorFlow
+753746:10175 Thrust
+763933:11358 Unsmear
+775320:10693 Wearable Support Library
+786022:10219 ahat
+796252:11358 backup
+807623:10291 firmware
+817928:11358 gRPC Java
+829299:11358 gemmlowp
+840685:11356 google_http_java_client
+852050:11358 gson
+863425:11358 joda_convert
+874802:10173 libphonenumber
+884988:11416 mobstore
+896414:11358 nsync
+907795:11358 play_apk_expansion
+919171:11358 sequence_lock
+930539:11358 stubs
+941910:11358 wearable
+953280:11341 xmpmeta
+964637:16013 Android SDK
+980662:87697 Eigen 3
+1068368:26536 GRTE
+1094914:4771 Glide
+1099709:9282 LLVM OpenMP Runtime
+1108999:4155 PNG
+1113166:5240 dng_sdk
+1118419:45758 fake_std
+1164191:4959 googleurl
+1169161:20240 libcap
+1189416:5747 libgeotiff
+1195175:4276 libjpeg
+1199469:5545 libjpeg-turbo
+1205023:45758 llvm
+1250790:1074 swig
+1251876:37100 systemc
+1288995:1096 Animal Sniffer
+1290101:1338 Boost
+1291450:1084 Brotli
+1292568:1846 Checker Framework Annotations
+1294435:1144 Expat XML Parser
+1295590:1124 Halide
+1296726:5416 Libxml2
+1302157:1078 Little CMS
+1303245:47018 X.Org
+1350279:1337 XCB library
+1351627:1088 giflib
+1352724:3873 glew
+1356605:1083 glm
+1357697:1100 half
+1358813:1091 libtxc_dxtn
+1359913:1084 mesa
+1361009:1334 ncurses
+1362353:2434 pngnq
+1364796:1139 tiff
+1365962:1056 touchimageview_android
+1367042:1473 Auth client library
+1368529:12517 BoringSSL
+1381054:1577 CUB
+1382663:1559 Chrome Certificate Verifier
+1384238:1320 Darts-clone
+1385567:5075 GDAL
+1390652:21000 ICU4C
+1411662:19442 ICU4J
+1431116:1602 JSR 305
+1432729:2266 LAPACK
+1435007:4535 LIBXSMM
+1439551:2214 LMDB
+1441778:1548 OpenBLAS
+1443337:1946 OpenCV
+1445295:2234 OpenCVX
+1447538:3182 PCRE
+1450738:1732 Protobuf Nano
+1452491:1732 Protocol Buffers
+1454231:1558 RE2
+1455798:1635 Skia
+1457442:1353 TooN
+1458807:1535 XMPCore
+1460352:2655 Zippy
+1463021:1530 Zstandard
+1464561:1901 bzip2
+1466472:1554 ceres
+1468048:1527 double-conversion
+1469590:2570 intrinsics
+1472174:1516 leptonica
+1473701:1506 libyuv
+1475225:1403 riscv_isa_sim
+1476644:1535 xmp_toolkit
+1478209:1756 NVIDIA Management Library
+1479976:898 Nanopb
+1480888:185 Ooura FFT
+1481081:680 STL
+1481769:731 UTF
+1482509:694 ares
+1483224:40 google_front_end
+1483276:886 lodepng
+1484174:1996 minizip
+1486187:882 neon_mathfun
+1487085:882 sse_mathfun
+1487976:2500 zlib

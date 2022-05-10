@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.camera.ui.views.MainActivityLayout android:id="@id/activity_root_view" android:tag="activityRoot" android:background="@color/main_layout_background_color" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <requestFocus />
+    <FrameLayout android:id="@id/viewfinder_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="viewfinder"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" />
+    <ViewStub android:id="@id/camera_frame_bottom_layout_stub" android:layout="@layout/camera" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.camera.ui.views.ViewfinderCover android:id="@id/viewfinder_cover" android:tag="viewfinderCover" android:background="@android:color/black" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" android:importantForAccessibility="no"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="viewfinderCoverIconArea">
+            <ImageView android:layout_gravity="center" android:id="@id/viewfinder_cover_icon" android:layout_width="@dimen/mode_transition_view_icon_size" android:layout_height="@dimen/mode_transition_view_icon_size" />
+        </FrameLayout>
+    </com.google.android.apps.camera.ui.views.ViewfinderCover>
+    <com.google.android.apps.camera.ui.modeswitcher.MoreModesGrid android:id="@id/more_modes_grid" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:columnCount="3" custom:gca_box="uncoveredPreview" />
+    <ViewStub android:id="@id/camera_intent_layout_stub" android:layout="@layout/intent" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="preview" />
+    <com.google.android.apps.camera.optionsbar.view.OptionsBarView android:id="@id/optionsbar2" android:tag="optionsBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:gca_box="optionsBar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="modeSwitcherUi">
+        <com.google.android.apps.camera.ui.modeswitcher.ModeSwitcher android:gravity="center" android:layout_gravity="center" android:id="@id/mode_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.google.android.apps.camera.bottombar.BottomBar android:gravity="center" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="bottomBar" />
+    <ViewStub android:id="@id/camera_frame_overlay_layout_stub" android:layout="@layout/camera_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.apps.camera.ui.views.MainActivityLayout>

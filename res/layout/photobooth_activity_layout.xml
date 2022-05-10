@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.camera.photobooth.ui.views.PhotoboothActivityLayout android:id="@id/activity_root_view" android:tag="activityRoot" android:background="@color/main_layout_background_color" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <requestFocus />
+    <FrameLayout android:id="@id/viewfinder_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:gca_box="viewfinder">
+        <SurfaceView android:id="@id/viewfinder" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" />
+    </FrameLayout>
+    <com.google.android.apps.camera.ui.views.CameraAppRootLayout android:id="@id/camera_tutorial_root" android:tag="tutorialUiRoot" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.camera.photobooth.tutorial.PhotoboothTutorialBackground android:id="@id/tutorial_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="fullScreen" />
+        <com.google.android.apps.camera.photobooth.tutorial.PhotoboothTutorialBackground android:id="@id/bottombar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="bottomBar" />
+        <com.google.android.apps.camera.photobooth.tutorial.PhotoboothTutorialContent android:id="@id/tutorial_content" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="uncoveredPreview" />
+    </com.google.android.apps.camera.ui.views.CameraAppRootLayout>
+    <com.google.android.apps.camera.ui.views.CameraAppRootLayout android:id="@id/camera_app_root" android:tag="uiRoot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/capture_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="preview">
+            <com.google.android.apps.camera.ui.views.CaptureAnimationOverlay android:id="@id/capture_animation_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.apps.camera.ui.widget.TracedFrameLayout>
+        <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/uncovered_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="uncoveredPreview">
+            <FrameLayout android:id="@id/preview_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:layout_gravity="end|center|top" android:id="@id/assistant_mic_container" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+            <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:layout_gravity="start|center|top" android:id="@id/debug_container" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+            <com.google.android.apps.camera.uiutils.ReplaceableView android:id="@id/notification_chip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.google.android.apps.camera.ui.widget.TracedFrameLayout android:id="@id/countdown_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.apps.camera.ui.widget.TracedFrameLayout>
+    </com.google.android.apps.camera.ui.views.CameraAppRootLayout>
+    <com.google.android.apps.camera.zoomui.ZoomUi android:id="@id/zoom_ui" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/zoom_ui_height" android:layout_alignParentBottom="true" custom:gca_box="zoomSlider" />
+    <com.google.android.apps.camera.optionsbar.view.OptionsBarView android:id="@id/optionsbar2" android:tag="optionsBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:gca_box="optionsBar" />
+    <com.google.android.apps.camera.photobooth.ui.views.PhotoboothBottomBar android:gravity="center" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="bottomBar" />
+    <com.google.android.apps.camera.ui.views.ViewfinderCover android:id="@id/viewfinder_cover" android:tag="viewfinderCover" android:background="@android:color/black" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" custom:gca_box="uncoveredPreview">
+            <ImageView android:layout_gravity="center" android:id="@id/viewfinder_cover_icon" android:layout_width="@dimen/mode_transition_view_icon_size" android:layout_height="@dimen/mode_transition_view_icon_size" />
+        </FrameLayout>
+    </com.google.android.apps.camera.ui.views.ViewfinderCover>
+</com.google.android.apps.camera.photobooth.ui.views.PhotoboothActivityLayout>

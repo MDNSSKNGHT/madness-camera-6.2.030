@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">רצף (%1$d תמונות)</item>
+        <item quantity="one">רצף (%1$d תמונה)</item>
+        <item quantity="two">רצף (%1$d תמונות)</item>
+        <item quantity="many">רצף (%1$d תמונות)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d פרצופים.</item>
+        <item quantity="one">%1$d פרצוף.</item>
+        <item quantity="two">%1$d פרצופים.</item>
+        <item quantity="many">%1$d פרצופים.</item>
+    </plurals>
+</resources>

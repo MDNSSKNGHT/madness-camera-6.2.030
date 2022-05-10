@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">"বাৰ্ষ্ট (%1$dখন ফট')"</item>
+        <item quantity="one">"বাৰ্ষ্ট (%1$dখন ফট')"</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$dখন মুখ।</item>
+        <item quantity="one">%1$dখন মুখ।</item>
+    </plurals>
+</resources>

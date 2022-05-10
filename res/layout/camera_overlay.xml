@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.camera.ui.layout.GcaLayout android:id="@id/camera_app_root_overlay" android:tag="overlayAppRoot" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.camera.ui.tutorialoverlay.TutorialOverlayWrapper android:id="@id/tutorials_placeholder_wrapper" android:background="@color/fullscreen_dialog_background_color" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr" />
+    <ViewStub android:id="@id/filmstrip_stub" android:layout="@layout/camera_filmstrip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.camera.filmstrip.transition.FilmstripTransitionLayout android:id="@id/filmstrip_transition_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.google.android.apps.camera.filmstrip.transition.FilmstripTransitionThumbnailView android:id="@id/transition_thumbnail_view" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </com.google.android.apps.camera.filmstrip.transition.FilmstripTransitionLayout>
+</com.google.android.apps.camera.ui.layout.GcaLayout>

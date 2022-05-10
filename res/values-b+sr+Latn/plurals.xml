@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">Rafalno snimanje (%1$d slika)</item>
+        <item quantity="one">Rafalno snimanje (%1$d slika)</item>
+        <item quantity="few">Rafalno snimanje (%1$d slike)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d lica.</item>
+        <item quantity="one">%1$d lice.</item>
+        <item quantity="few">%1$d lica.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="burst">
+        <item quantity="other">"Sarsie (%1$d foto's)"</item>
+        <item quantity="one">Sarsie (%1$d foto)</item>
+    </plurals>
+    <plurals name="number_of_faces_announcement">
+        <item quantity="other">%1$d gesigte.</item>
+        <item quantity="one">%1$d gesig.</item>
+    </plurals>
+</resources>
