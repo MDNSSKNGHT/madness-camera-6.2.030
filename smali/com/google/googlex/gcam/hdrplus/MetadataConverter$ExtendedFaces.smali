@@ -1,16 +1,27 @@
 .class public Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;
 .super Ljava/lang/Object;
-.source "PG"
+.source "MetadataConverter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/googlex/gcam/hdrplus/MetadataConverter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ExtendedFaces"
+.end annotation
 
 
 # instance fields
-.field public faceLandmarkCounts:[I
+.field private faceLandmarkCounts:[I
 
-.field public faceLandmarkIds:[B
+.field private faceLandmarkIds:[B
 
-.field public faceLandmarkXy:[F
+.field private faceLandmarkXy:[F
 
-.field public faces:[Landroid/hardware/camera2/params/Face;
+.field private final faces:[Landroid/hardware/camera2/params/Face;
 
 
 # direct methods
@@ -90,83 +101,85 @@
 .method extendedFacesAvailable()Z
     .locals 2
 
+    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkCounts:[I
+
     invoke-virtual {p0}, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->facesAvailable()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkCounts:[I
+    if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
 
     array-length v0, v0
 
-    iget-object v1, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
 
-    array-length v1, v1
+    array-length p0, p0
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    :goto_0
+    return p0
 .end method
 
 .method public facesAvailable()Z
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    array-length v0, v0
+    array-length p0, p0
 
-    if-lez v0, :cond_0
+    if-lez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    :goto_0
+    return p0
 .end method
 
 .method getFaceLandmarkCounts()[I
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkCounts:[I
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkCounts:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getFaceLandmarkIds()[B
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkIds:[B
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkIds:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getFaceLandmarkXy()[F
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkXy:[F
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faceLandmarkXy:[F
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getFaces()[Landroid/hardware/camera2/params/Face;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
+    iget-object p0, p0, Lcom/google/googlex/gcam/hdrplus/MetadataConverter$ExtendedFaces;->faces:[Landroid/hardware/camera2/params/Face;
 
-    return-object v0
+    return-object p0
 .end method
